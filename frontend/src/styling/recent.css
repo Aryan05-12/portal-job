@@ -1,0 +1,366 @@
+/* Card Container (Bigger & Louder!) */
+.recent-job-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;            /* Bada border radius */
+  padding: 1.75rem 2rem;          /* Padding badha di taaki card bada dikhe */
+  margin-bottom: 1.5rem;          /* Do cards ke beech zyada gap */
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -1px rgba(0, 0, 0, 0.01);
+  width: 100%;                    /* Poori width cover karega */
+  box-sizing: border-box;
+}
+
+/* Hover Effect: Bada lift aur solid shadow */
+.recent-job-card:hover {
+  transform: translateY(-5px);    /* Thoda upar lift hoga */
+  border-color: #cbd5e1;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 10px 10px -5px rgba(0, 0, 0, 0.03);
+}
+
+.recent-job-left {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;                  /* Logo aur text me zyada space */
+  flex: 1;
+}
+
+/* Big & Bold Logo Shell */
+.recent-job-logo {
+  width: 68px;                    /* Logo bada kar diya (Pehle 52px tha) */
+  height: 68px;
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2563eb;
+  transition: transform 0.2s ease;
+  flex-shrink: 0;                 /* Logo dabega nahi screen choti hone par */
+}
+
+/* Icon size scale up */
+.recent-job-logo .logo-icon {
+  width: 28px !important;         /* Icon ka size bhi bada kar diya */
+  height: 28px !important;
+}
+
+.recent-job-card:hover .recent-job-logo {
+  transform: scale(1.08);
+}
+
+/* Content Area */
+.recent-job-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;                   /* Rows ke beech me gap badha diya */
+  flex: 1;
+}
+
+.recent-job-header-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Big Job Title */
+.recent-job-title {
+  margin: 0;
+  font-size: 1.35rem;             /* Heading badi kar di (Pehle 1.1rem thi) */
+  font-weight: 700;               /* Zyada bold aur prominent */
+  letter-spacing: -0.02em;
+}
+
+.recent-job-title a {
+  text-decoration: none;
+  color: #0f172a;                 /* Darker tone for premium feel */
+  transition: color 0.2s ease;
+}
+
+.recent-job-title a:hover {
+  color: #2563eb;
+}
+
+/* Badges & Meta Items */
+.job-badge {
+  font-size: 0.8rem;              /* Badge text thoda bada */
+  font-weight: 700;
+  padding: 0.35rem 0.75rem;       /* Inner padding badha di */
+  border-radius: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.category-badge {
+  background-color: #f8fafc;
+  color: #475569;
+  border: 1px solid #e2e8f0;
+}
+
+.recent-job-meta-row {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;                  /* Meta items ke beech zyada space */
+  flex-wrap: wrap;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;             /* Text bada kar diya */
+  color: #475569;
+  font-weight: 500;
+}
+
+.meta-icon {
+  color: #94a3b8;
+  width: 16px;                    /* Meta icons bhi bade kar diye */
+  height: 16px;
+}
+
+/* Big Salary Highlight */
+.salary-highlight {
+  color: #0f172a;
+  font-weight: 700;               /* Extra Bold */
+  font-size: 1rem;
+}
+
+.salary-highlight .meta-icon {
+  color: #10b981;                 /* Green Cash Icon */
+}
+
+/* ==========================================
+   BIG & JUMBO DYNAMIC JOB TYPE BADGES
+   ========================================== */
+.recent-job-type {
+  font-size: 0.9rem;              /* Type badge text bada */
+  font-weight: 700;
+  padding: 0.5rem 1.25rem;        /* Jumbo padding padding */
+  border-radius: 9999px;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+
+/* 1. Full-Time -> Clean Velvet/Green Fresh */
+.type-fulltime {
+  background-color: #ecfdf5;
+  color: #059669;
+  border: 1px solid #a7f3d0;
+}
+
+/* 2. Part-Time -> Energetic Orange */
+.type-parttime {
+  background-color: #fff7ed;
+  color: #ea580c;
+  border: 1px solid #ffedd5;
+}
+
+/* 3. Remote -> Premium Violet */
+.type-remote {
+  background-color: #f5f3ff;
+  color: #7c3aed;
+  border: 1px solid #ddd6fe;
+}
+
+/* 4. Internship -> Corporate Cool Blue */
+.type-intern {
+  background-color: #eff6ff;
+  color: #2563eb;
+  border: 1px solid #bfdbfe;
+}
+
+/* Default Fallback */
+.type-default {
+  background-color: #f8fafc;
+  color: #64748b;
+  border: 1px solid #e2e8f0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .recent-job-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+    padding: 1.5rem;
+  }
+  .recent-job-right {
+    align-self: flex-end;
+  }
+}
+
+
+/* Base Container alignment */
+.sj-page-wrapper {
+  max-w: 850px;
+  margin: 40px auto;
+  padding: 0 20px;
+  font-family: sans-serif;
+}
+
+/* Premium Spacious Card look */
+.sj-details-card {
+  background: #ffffff;
+  border: 1px solid #eef1f6;
+  border-radius: 12px;
+  padding: 40px; /* Khula khula spacing inside card */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+}
+
+/* Header layout rules */
+.sj-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.sj-main-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #111827;
+  margin: 0 0 6px 0;
+  letter-spacing: -0.5px;
+}
+
+.sj-company-name {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #4b5563;
+  margin: 0;
+}
+
+/* Dynamic badges styled exact like dashboard */
+.sj-type-badge {
+  padding: 8px 18px;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  border-radius: 4px;
+  color: white;
+  white-space: nowrap;
+}
+
+.sj-bg-blue { background-color: #1e88e5; }
+.sj-bg-teal { background-color: #00695c; }
+
+.sj-divider {
+  border: 0;
+  border-top: 1px solid #eef1f6;
+  margin: 30px 0;
+}
+
+/* Horizontal Meta Fields layout */
+.sj-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 35px;
+}
+
+.sj-meta-box {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sj-meta-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #9ca3af;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.sj-meta-value {
+  font-size: 1.05rem;
+  color: #1f2937;
+  font-weight: 600;
+}
+
+/* Description style text area */
+.sj-description-section {
+  background-color: #fafbfc;
+  padding: 25px;
+  border-radius: 8px;
+  border: 1px solid #f1f3f7;
+  margin-bottom: 35px;
+}
+
+.sj-section-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 12px 0;
+}
+
+.sj-description-text {
+  font-size: 1rem;
+  color: #4b5563;
+  line-height: 1.7; /* Perfect dynamic readability */
+  margin: 0;
+  white-space: pre-line; /* linebreaks support */
+}
+
+/* Beautiful Action Button styling */
+.sj-action-area {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.sj-apply-btn {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 14px 35px;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+.sj-apply-btn:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(37, 99, 235, 0.3);
+}
+
+/* Extra simple Loading state look */
+.sj-loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+.sj-loading-text {
+  color: #6b7280;
+  font-weight: 500;
+}
+
+/* Responsive Rules for smaller setups */
+@media (max-width: 650px) {
+  .sj-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+  .sj-meta-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .sj-details-card {
+    padding: 25px;
+  }
+  .sj-apply-btn {
+    width: 100%;
+    text-align: center;
+  }
+}

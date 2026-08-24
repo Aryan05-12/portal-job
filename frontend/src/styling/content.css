@@ -1,0 +1,724 @@
+/* ==========================================================================
+   1. VARIABLES & BASE SETUP (Elite Tech System)
+   ========================================================================== */
+:root {
+  --teal-primary: #0d9488;
+  --teal-hover: #0f766e;
+  --teal-light: #f0fdfa;
+  --mint-accent: #10b981;
+  --text-dark: #0f172a;
+  --text-muted: #64748b;
+  --bg-light: #f8fafc;
+  --card-border: rgba(226, 232, 240, 0.8);
+  --glass-bg: rgba(255, 255, 255, 0.75);
+  --glass-blur: blur(12px);
+  --shadow-sm: 0 4px 20px -2px rgba(15, 23, 42, 0.03);
+  --shadow-md: 0 12px 30px -4px rgba(15, 23, 42, 0.06);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow-x: hidden;
+}
+
+.zen-home-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding-bottom: 5rem;
+}
+
+/* Soft Ambient Background Blur Blobs */
+.zen-blob {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  filter: blur(100px);
+  z-index: -1;
+  opacity: 0.6;
+  pointer-events: none;
+}
+.zen-blob-1 {
+  top: -100px;
+  right: -50px;
+  background-color: rgba(13, 148, 136, 0.15); /* Soft Teal */
+}
+.zen-blob-2 {
+  top: 400px;
+  left: -100px;
+  background-color: rgba(16, 185, 129, 0.12); /* Soft Mint */
+}
+
+/* ==========================================================================
+   2. HERO SECTION & FLOATING WATERMARKS
+   ========================================================================== */
+.zen-hero {
+  position: relative;
+  padding: 6rem 2rem 4rem 2rem; /* Clean spacious padding */
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* Subtle Sketch Floating Watermarks */
+.zen-watermark {
+  position: absolute;
+  color: #cbd5e1;
+  opacity: 0.3;
+  pointer-events: none;
+  animation: floatOverlay 6s ease-in-out infinite alternate;
+}
+.watermark-rocket { top: 15%; left: 5%; animation-delay: 0s; }
+.watermark-bulb   { top: 75%; left: 45%; animation-delay: 1.5s; }
+.watermark-gear   { top: 20%; right: 45%; animation-delay: 3s; }
+.watermark-chart  { top: 80%; left: 8%; animation-delay: 0.5s; }
+.watermark-globe  { top: 45%; right: 5%; animation-delay: 2s; }
+
+@keyframes floatOverlay {
+  0% { transform: translateY(0px) rotate(0deg); }
+  100% { transform: translateY(-15px) rotate(5deg); }
+}
+
+.zen-hero-container {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.zen-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--teal-light);
+  color: var(--teal-primary);
+  padding: 6px 14px;
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(13, 148, 136, 0.15);
+}
+
+.zen-teal-sparkle {
+  color: var(--mint-accent);
+}
+
+.zen-hero-title {
+  font-size: 3.5rem;
+  line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--text-dark);
+  margin-bottom: 1.5rem;
+}
+
+.zen-text-gradient-teal {
+  background: linear-gradient(135deg, var(--teal-primary), var(--mint-accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.zen-hero-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  max-width: 520px;
+}
+
+/* Integrated Search Box */
+.zen-search-box {
+  background: #ffffff;
+  border: 1px solid var(--card-border);
+  padding: 10px;
+  border-radius: 16px;
+  box-shadow: var(--shadow-md);
+  margin-bottom: 2.5rem;
+  max-width: 580px;
+}
+
+.zen-search-group {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.zen-input-with-icon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  padding: 0 12px;
+}
+
+.zen-search-icon {
+  color: var(--text-muted);
+}
+
+.zen-input-with-icon input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: var(--text-dark);
+  background: transparent;
+}
+
+.zen-divider {
+  width: 1px;
+  height: 30px;
+  background-color: #e2e8f0;
+}
+
+.zen-search-btn {
+  background: var(--teal-primary);
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.zen-search-btn:hover {
+  background: var(--teal-hover);
+}
+
+/* Hero CTA Buttons */
+.zen-hero-actions {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.zen-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.zen-btn-primary-teal {
+  background: var(--text-dark);
+  color: #ffffff;
+  border: none;
+}
+.zen-btn-primary-teal:hover {
+  background: #1e293b;
+  transform: translateY(-2px);
+}
+
+.zen-btn-outline-teal {
+  background: transparent;
+  color: var(--text-dark);
+  border: 1px solid var(--card-border);
+}
+.zen-btn-outline-teal:hover {
+  background: #f1f5f9;
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   3. RIGHT SIDE COLLAGE FRAME SHOWCASE
+   ========================================================================== */
+.zen-hero-right {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.zen-collage-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  height: 450px;
+}
+
+.zen-card-frame {
+  position: absolute;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  background: #ffffff;
+  border: 4px solid #ffffff;
+  transition: transform 0.3s ease;
+}
+
+.zen-card-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.frame-main {
+  width: 320px;
+  height: 380px;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.zen-frame-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(15, 23, 42, 0.85), transparent);
+  padding: 20px;
+  color: #ffffff;
+}
+
+.zen-frame-overlay h4 { font-size: 18px; font-weight: 700; margin-bottom: 4px; }
+.zen-frame-overlay small { color: #cbd5e1; font-size: 13px; }
+
+.frame-sub-1 {
+  width: 180px;
+  height: 220px;
+  right: -20px;
+  bottom: 20px;
+  z-index: 3;
+}
+
+/* Glassmorphic Stats Badge */
+.frame-stats-badge {
+  position: absolute;
+  top: 40%;
+  right: -40px;
+  z-index: 4;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: var(--glass-blur);
+  padding: 16px 20px;
+  box-shadow: 0 10px 30px -10px rgba(0,0,0,0.08);
+}
+
+.zen-glass-content h5 {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--teal-primary);
+}
+.zen-glass-content p {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   4. NEW FEATURE 2: TRUSTED BRANDS SLIDER
+   ========================================================================== */
+.zen-brands-slider {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.zen-brands-label {
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  font-weight: 700;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.zen-brands-track {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  background: var(--glass-bg);
+  border: 1px solid var(--card-border);
+  padding: 20px;
+  border-radius: 16px;
+}
+
+.zen-brand-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #94a3b8;
+}
+
+/* ==========================================================================
+   5. NEW FEATURE 4: ANALYTICAL METRICS CARDS
+   ========================================================================== */
+.zen-metrics-section {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+}
+
+.zen-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.zen-metric-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #ffffff;
+  border: 1px solid var(--card-border);
+  padding: 24px;
+  border-radius: 18px;
+  box-shadow: var(--shadow-sm);
+}
+
+.zen-metric-card h4 {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--text-dark);
+}
+
+.zen-metric-card p {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.zen-metric-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  border-radius: 14px;
+}
+.teal-bg  { background: rgba(13, 148, 136, 0.1); color: var(--teal-primary); }
+.mint-bg  { background: rgba(16, 185, 129, 0.1); color: var(--mint-accent); }
+.blue-bg  { background: rgba(2, 132, 199, 0.1); color: #0284c7; }
+
+/* ==========================================================================
+   6. CATEGORIES SECTION (Interactive Infinite Tabs)
+   ========================================================================== */
+.zen-categories-section {
+  max-width: 1200px;
+  margin: 5rem auto;
+  padding: 0 2rem;
+}
+
+.zen-section-header {
+  margin-bottom: 2.5rem;
+}
+
+.zen-section-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  letter-spacing: -0.01em;
+}
+
+.zen-section-subtitle {
+  font-size: 15px;
+  color: var(--text-muted);
+  margin-top: 6px;
+}
+
+.zen-marquee-view {
+  width: 100%;
+  overflow-x: auto; /* Fallback for safe layout scroll */
+  padding-bottom: 10px;
+}
+
+.zen-marquee-rail {
+  display: flex;
+  gap: 16px;
+}
+
+.zen-cat-card {
+  flex: 0 0 240px;
+  background: #ffffff;
+  border: 1px solid var(--card-border);
+  padding: 24px;
+  border-radius: 20px;
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  position: relative;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.zen-cat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--teal-primary);
+}
+
+/* Feature 1: Selected Category Tab Active Styling */
+.zen-cat-card-active {
+  border-color: var(--teal-primary) !important;
+  box-shadow: 0 10px 25px -5px rgba(13, 148, 136, 0.15) !important;
+  background: var(--teal-light) !important;
+}
+
+.zen-cat-icon-box {
+  width: 44px;
+  height: 44px;
+  background: #f8fafc;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.zen-cat-card-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 6px;
+}
+
+.zen-cat-card-count {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.zen-cat-arrow {
+  position: absolute;
+  right: 20px;
+  bottom: 24px;
+  color: var(--text-muted);
+  opacity: 0;
+  transform: translateX(-5px);
+  transition: all 0.2s ease;
+}
+
+.zen-cat-card:hover .zen-cat-arrow {
+  opacity: 1;
+  transform: translateX(0);
+  color: var(--teal-primary);
+}
+
+/* ==========================================================================
+   7. RECENT JOBS SECTION WITH CONTROL FILTER PANEL
+   ========================================================================== */
+.zen-recent-jobs-section {
+  max-width: 1200px;
+  margin: 5rem auto;
+  padding: 0 2rem;
+}
+
+.zen-container {
+  width: 100%;
+}
+
+/* Feature 3: Spacious Header Row Controls */
+.zen-section-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 2.5rem; /* Spacious Gap */
+}
+
+.zen-controls-panel {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.zen-control-btn, .zen-control-select {
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: 1px solid var(--card-border);
+  background: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-dark);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.zen-control-btn:hover {
+  background: #f1f5f9;
+  transform: translateY(-1px);
+}
+
+.zen-control-select {
+  appearance: none;
+  padding-right: 32px;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%230f172a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+}
+
+.zen-jobs-list-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.zen-empty-loader {
+  text-align: center;
+  padding: 4rem 0;
+  background: #ffffff;
+  border: 1px dashed var(--card-border);
+  border-radius: 16px;
+  color: var(--text-muted);
+}
+
+.subtle-spinner {
+  width: 28px;
+  height: 28px;
+  border: 3px solid #e2e8f0;
+  border-top-color: var(--teal-primary);
+  border-radius: 50%;
+  margin: 0 auto 12px auto;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ==========================================================================
+   8. 🔄 SPINNING AI ASSISTANT BUTTON
+   ========================================================================== */
+.zen-ai-spinner-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 90px;
+  height: 90px;
+  z-index: 999;
+  text-decoration: none;
+  background: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.zen-ai-spinner-btn:hover {
+  transform: scale(1.08);
+}
+
+.zen-ai-inside {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.zen-ai-sparkle-center {
+  color: var(--teal-primary);
+  z-index: 2;
+}
+
+.zen-svg-loop {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  animation: rotateText 12s linear infinite;
+}
+
+.zen-text-loop-track {
+  fill: var(--text-dark);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+@keyframes rotateText {
+  to { transform: rotate(360deg); }
+}
+
+/* Responsive Grid Layout Breakpoint */
+@media (max-width: 968px) {
+  .zen-hero-container { grid-template-columns: 1fr; gap: 40px; }
+  .zen-metrics-grid { grid-template-columns: 1fr; }
+  .zen-section-header-row { flex-direction: column; align-items: flex-start; gap: 16px; }
+}
+
+
+/* ==========================================================================
+   MARQUEE INFINITE LOOP SYSTEM FIX
+   ========================================================================== */
+.zen-marquee-view {
+  width: 100%;
+  overflow: hidden; /* Excess hide taaki scrollbar mat dikhe */
+  padding: 15px 0;
+  position: relative;
+}
+
+.zen-marquee-view::before,
+.zen-marquee-view::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+.zen-marquee-view::before {
+  left: 0;
+  background: linear-gradient(to right, var(--bg-light), transparent);
+}
+.zen-marquee-view::after {
+  right: 0;
+  background: linear-gradient(to left, var(--bg-light), transparent);
+}
+
+.zen-marquee-rail {
+  display: flex;
+  gap: 24px;
+  width: max-content;
+  animation: marqueeRun 25s linear infinite;
+}
+
+/* Jab user active click karne ke liye hover kare toh slider rukk jaye */
+.zen-marquee-view:hover .zen-marquee-rail {
+  animation-play-state: paused;
+}
+
+.zen-cat-card {
+  flex-shrink: 0; /* CRITICAL: Divs squeeze hokar kharab nahi honge */
+  width: 260px;
+  background: #ffffff;
+  border: 1px solid var(--card-border);
+  padding: 24px;
+  border-radius: 20px;
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  position: relative;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes marqueeRun {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    /* Exact 5 cards + gaps ka total translate minus */
+    transform: translateX(calc(-260px * 5 - 24px * 5));
+  }
+}

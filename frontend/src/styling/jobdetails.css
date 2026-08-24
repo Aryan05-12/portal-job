@@ -1,0 +1,96 @@
+/* Pure page ko center karne ke liye dashboard layout */
+.jd-page-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f6f9;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Main card jisme table rahega */
+.jd-card-container {
+    background: #ffffff;
+    width: 100%;
+    max-width: 900px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Heading style */
+.jd-title {
+    font-size: 24px;
+    color: #333333;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #4a90e2;
+    padding-bottom: 10px;
+    font-weight: 600;
+}
+
+/* Table Ka Setup */
+.jd-details-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+/* Header style */
+.jd-details-table th {
+    background-color: #4a90e2;
+    color: white;
+    text-align: left;
+    padding: 12px 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
+
+/* Borders aur spacing rows ke liye */
+.jd-details-table tr {
+    border-bottom: 1px solid #eef2f5;
+}
+
+.jd-details-table tr:hover {
+    background-color: #f8faff; /* Hover karne par halka color change */
+}
+
+/* Field ke names (Bold labels) */
+.jd-label {
+    font-weight: 600;
+    color: #4a5568;
+    background-color: #f7fafc;
+    width: 20%;
+    padding: 15px;
+}
+
+/* Actual values wala data */
+.jd-value {
+    color: #2d3748;
+    padding: 15px;
+    width: 30%;
+}
+
+/* Job Description long text ke liye special styling */
+.jd-desc {
+    line-height: 1.6;
+    color: #4a5568;
+    white-space: pre-line; /* text paragraphs ko sahi format me rakhega */
+}
+
+/* Job Type ke liye ek chota sa sunder badge */
+.jd-badge {
+    background-color: #e1effe;
+    color: #1a56db;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    display: inline-block;
+}
+
+
+

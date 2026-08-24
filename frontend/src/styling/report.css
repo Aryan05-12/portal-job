@@ -1,0 +1,189 @@
+:root {
+  --br-primary: #4f46e5;
+  --br-primary-hover: #4338ca;
+  --br-bg-main: #f8fafc;
+  --br-bg-card: #ffffff;
+  --br-text-main: #0f172a;
+  --br-text-muted: #64748b;
+  --br-border: #e2e8f0;
+}
+
+.br-report-page {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--br-bg-main);
+  min-height: 100vh;
+  color: var(--br-text-main);
+}
+
+/* Header Section */
+.br-top-header {
+  background-color: var(--br-bg-card);
+  padding: 24px 40px;
+  border-bottom: 1px solid var(--br-border);
+  margin-bottom: 48px;
+  text-align: center;
+}
+
+.br-header-title h1 {
+  font-size: 26px;
+  margin: 0 0 4px 0;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.br-header-title p {
+  font-size: 14px;
+  color: var(--br-text-muted);
+  margin: 0;
+}
+
+/* Main Card */
+.br-report-container {
+  background: var(--br-bg-card);
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 40px;
+  border-radius: 16px;
+  border: 1px solid var(--br-border);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02), 0 10px 30px rgba(0, 0, 0, 0.04);
+}
+
+.br-card-header {
+  margin-bottom: 32px;
+  border-bottom: 1px solid var(--br-border);
+  padding-bottom: 20px;
+}
+
+.br-card-header h2 {
+  font-size: 20px;
+  margin: 0 0 6px 0;
+  font-weight: 600;
+}
+
+.br-card-header span {
+  font-size: 13px;
+  color: var(--br-text-muted);
+}
+
+.br-report-form {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* Dono inputs ko ek line me lane ke liye grid */
+.br-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.br-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.br-form-group label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #475569;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.br-form-group input[type="date"] {
+  padding: 14px 16px;
+  font-size: 15px;
+  border: 1.5px solid var(--br-border);
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.br-form-group input[type="date"]:focus {
+  border-color: var(--br-primary);
+  box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.12);
+}
+
+/* Premium Button Styling */
+.br-submit-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: var(--br-primary);
+  color: #ffffff;
+  padding: 15px 24px;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 8px;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
+}
+
+.br-btn-icon {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.2s ease;
+}
+
+.br-submit-btn:hover {
+  background-color: var(--br-primary-hover);
+  box-shadow: 0 6px 20px rgba(79, 70, 229, 0.3);
+}
+
+/* Hover karne par arrow aage move hoga */
+.br-submit-btn:hover .br-btn-icon {
+  transform: translateX(4px);
+}
+
+.br-submit-btn:active {
+  transform: scale(0.98);
+}
+
+.br-report-message {
+  margin: 20px 0 0 0;
+  color: var(--br-text-muted);
+  font-weight: 600;
+}
+
+.br-report-results {
+  margin-top: 24px;
+  border-top: 1px solid var(--br-border);
+}
+
+.br-report-row {
+  padding: 14px 0;
+  border-bottom: 1px solid var(--br-border);
+}
+
+.br-report-row strong,
+.br-report-row span {
+  display: block;
+}
+
+.br-report-row strong {
+  color: var(--br-text-main);
+  margin-bottom: 4px;
+}
+
+.br-report-row span {
+  color: var(--br-text-muted);
+  font-size: 14px;
+}
+
+/* Mobile responsive screen adjust */
+@media (max-width: 640px) {
+  .br-form-row {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .br-report-container {
+    margin: 0 16px;
+    padding: 24px;
+  }
+}

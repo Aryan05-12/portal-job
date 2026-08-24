@@ -1,0 +1,288 @@
+/* ═══════════════════════════════════════════════════════════
+   GEMINI AI — Elite Tech Premium Interface (Auto Light/Dark)
+   Design: Holographic Glassmorphism with Neural Aurora
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── Root Variables (Default: Dark Mode) ── */
+:root {
+  --g-primary: #6366f1;
+  --g-primary-glow: rgba(99, 102, 241, 0.4);
+  --g-accent-1: #a78bfa;
+  --g-accent-2: #06b6d4; /* Added Cyan for a Tech vibe */
+  
+  /* Dark Theme Colors */
+  --g-bg-base: #05050a;
+  --g-surface: rgba(15, 15, 25, 0.65);
+  --g-glass-border: rgba(255, 255, 255, 0.08);
+  --g-text-primary: #f8f9fa;
+  --g-text-secondary: rgba(225, 220, 255, 0.7);
+  --g-text-muted: rgba(200, 195, 230, 0.4);
+  
+  /* Bubbles & Inputs */
+  --g-user-bubble: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #a78bfa 100%);
+  --g-bot-bubble: rgba(255, 255, 255, 0.03);
+  --g-input-bg: rgba(0, 0, 0, 0.2);
+  
+  /* Layout (Khula-Khula approach) */
+  --g-radius-lg: 24px;
+  --g-radius-md: 16px;
+  --g-radius-sm: 12px;
+  --g-transition: cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* ── Light Mode Override ── */
+@media (prefers-color-scheme: light) {
+  :root {
+    --g-bg-base: #f0f2f5;
+    --g-surface: rgba(255, 255, 255, 0.75);
+    --g-glass-border: rgba(0, 0, 0, 0.08);
+    --g-text-primary: #111827;
+    --g-text-secondary: #4b5563;
+    --g-text-muted: #9ca3af;
+    
+    --g-bot-bubble: rgba(255, 255, 255, 0.6);
+    --g-input-bg: rgba(255, 255, 255, 0.9);
+  }
+}
+
+/* ── Main Container & The Unique "Neural Aurora" ── */
+.g-chat-main-wrapper {
+  max-width: 800px !important; /* Slightly wider for an elite dashboard feel */
+  margin: 40px auto !important;
+  height: 85vh !important;
+  display: flex !important;
+  flex-direction: column !important;
+  background: var(--g-surface) !important;
+  backdrop-filter: blur(40px) saturate(1.8) !important;
+  -webkit-backdrop-filter: blur(40px) saturate(1.8) !important;
+  border: 1px solid var(--g-glass-border) !important;
+  border-radius: var(--g-radius-lg) !important;
+  box-shadow:
+    0 32px 80px rgba(0, 0, 0, 0.2),
+    0 4px 20px rgba(99, 102, 241, 0.1),
+    inset 0 1px 1px rgba(255, 255, 255, 0.1) !important;
+  font-family: 'Inter', 'SF Pro Display', -apple-system, sans-serif !important;
+  box-sizing: border-box !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+/* 🌟 UNIQUE ADDITION: The Living Neural Aurora (Background Mesh) */
+.g-chat-main-wrapper::before {
+  content: '' !important;
+  position: absolute !important;
+  top: -50% !important;
+  left: -50% !important;
+  width: 200% !important;
+  height: 200% !important;
+  background: 
+    radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.15), transparent 40%),
+    radial-gradient(circle at 80% 20%, rgba(167, 139, 250, 0.1), transparent 30%),
+    radial-gradient(circle at 20% 80%, rgba(6, 182, 212, 0.1), transparent 40%) !important;
+  animation: auroraFlow 15s linear infinite !important;
+  pointer-events: none !important;
+  z-index: 0 !important;
+}
+
+@keyframes auroraFlow {
+  0% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(180deg) scale(1.1); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+
+/* ── Header ── */
+.g-chat-header {
+  padding: 24px 30px !important;
+  background: rgba(128, 128, 128, 0.03) !important;
+  border-bottom: 1px solid var(--g-glass-border) !important;
+  position: relative !important;
+  z-index: 2 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 16px !important;
+}
+
+/* Animated status indicator */
+.g-chat-header::before {
+  content: '' !important;
+  width: 12px !important;
+  height: 12px !important;
+  border-radius: 50% !important;
+  background: #10b981 !important; /* Emerald Green */
+  box-shadow: 0 0 12px rgba(16, 185, 129, 0.6) !important;
+  animation: gStatusPulse 2s infinite ease-in-out !important;
+  flex-shrink: 0 !important;
+}
+
+@keyframes gStatusPulse {
+  0%, 100% { box-shadow: 0 0 12px rgba(16, 185, 129, 0.6), 0 0 4px rgba(16, 185, 129, 0.4); transform: scale(1); }
+  50% { box-shadow: 0 0 20px rgba(16, 185, 129, 0.9), 0 0 8px rgba(16, 185, 129, 0.5); transform: scale(1.1); }
+}
+
+.g-chat-header h2 {
+  margin: 0 !important;
+  font-size: 1.25rem !important;
+  color: var(--g-text-primary) !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.03em !important;
+}
+
+/* ── Chat Display Area ── */
+.g-chat-display-window {
+  flex: 1 !important;
+  overflow-y: auto !important;
+  padding: 30px !important;
+  background: transparent !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 20px !important; /* More breathing room */
+  position: relative !important;
+  z-index: 1 !important;
+  scroll-behavior: smooth !important;
+}
+
+.g-chat-display-window::-webkit-scrollbar { width: 6px !important; }
+.g-chat-display-window::-webkit-scrollbar-track { background: transparent !important; }
+.g-chat-display-window::-webkit-scrollbar-thumb {
+  background: var(--g-glass-border) !important;
+  border-radius: 10px !important;
+}
+
+/* ── Message Rows ── */
+.g-chat-message-row {
+  display: flex !important;
+  width: 100% !important;
+  animation: gMessageSlideIn 0.5s var(--g-transition) both !important;
+}
+
+@keyframes gMessageSlideIn {
+  from { opacity: 0 !important; transform: translateY(20px) scale(0.98) !important; }
+  to { opacity: 1 !important; transform: translateY(0) scale(1) !important; }
+}
+
+.g-chat-user-align { justify-content: flex-end !important; }
+.g-chat-bot-align { justify-content: flex-start !important; }
+
+/* ── Chat Bubbles ── */
+.g-chat-text-bubble {
+  max-width: 75% !important;
+  padding: 16px 22px !important;
+  border-radius: var(--g-radius-md) !important;
+  font-size: 1rem !important; /* Clear, readable font size */
+  line-height: 1.7 !important;
+  letter-spacing: -0.01em !important;
+  position: relative !important;
+  transition: transform 0.3s var(--g-transition), box-shadow 0.3s var(--g-transition) !important;
+}
+
+.g-chat-text-bubble:hover { transform: translateY(-2px) !important; }
+
+.g-chat-bubble-paragraph {
+  margin: 0 !important;
+  white-space: pre-wrap !important;
+  word-break: break-word !important;
+}
+
+/* ── User Bubble ── */
+.g-chat-user-theme {
+  background: var(--g-user-bubble) !important;
+  color: #ffffff !important;
+  border-bottom-right-radius: 4px !important;
+  box-shadow: 0 8px 24px rgba(99, 102, 241, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+}
+
+/* ── Bot Bubble (Holographic Edges) ── */
+.g-chat-bot-theme {
+  background: var(--g-bot-bubble) !important;
+  color: var(--g-text-primary) !important;
+  border-bottom-left-radius: 4px !important;
+  border: 1px solid var(--g-glass-border) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* 🌟 UNIQUE ADDITION: Glowing Tech Accent Line */
+.g-chat-bot-theme::before {
+  content: '' !important;
+  position: absolute !important;
+  left: -1px !important;
+  top: 10px !important;
+  bottom: 10px !important;
+  width: 3px !important;
+  border-radius: 4px !important;
+  background: linear-gradient(180deg, var(--g-primary) 0%, var(--g-accent-2) 100%) !important;
+  box-shadow: 0 0 10px var(--g-primary-glow) !important;
+}
+
+/* ── Input Form Bar ── */
+.g-chat-input-form-bar {
+  display: flex !important;
+  gap: 14px !important;
+  padding: 24px 30px !important;
+  background: rgba(128, 128, 128, 0.03) !important;
+  border-top: 1px solid var(--g-glass-border) !important;
+  position: relative !important;
+  z-index: 2 !important;
+  align-items: center !important;
+}
+
+/* ── Text Input ── */
+.g-chat-text-input-field {
+  flex: 1 !important;
+  padding: 16px 24px !important;
+  border: 1px solid var(--g-glass-border) !important;
+  border-radius: 32px !important;
+  font-size: 1rem !important;
+  outline: none !important;
+  background: var(--g-input-bg) !important;
+  color: var(--g-text-primary) !important;
+  transition: all 0.3s var(--g-transition) !important;
+}
+
+.g-chat-text-input-field::placeholder { color: var(--g-text-muted) !important; }
+
+.g-chat-text-input-field:focus {
+  border-color: var(--g-primary) !important;
+  background: transparent !important;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15) !important;
+}
+
+/* ── Send Button ── */
+.g-chat-submit-action-btn {
+  padding: 0 32px !important;
+  height: 52px !important;
+  background: var(--g-user-bubble) !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 32px !important;
+  font-weight: 600 !important;
+  font-size: 1rem !important;
+  cursor: pointer !important;
+  transition: all 0.3s var(--g-transition) !important;
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+}
+
+.g-chat-submit-action-btn:hover:not(:disabled) {
+  transform: translateY(-2px) scale(1.02) !important;
+  box-shadow: 0 8px 28px rgba(99, 102, 241, 0.4) !important;
+}
+
+.g-chat-submit-action-btn:active:not(:disabled) { transform: translateY(0) scale(0.98) !important; }
+.g-chat-submit-action-btn:disabled { opacity: 0.5 !important; cursor: not-allowed !important; }
+
+/* ── Responsive Mobile Optimization ── */
+@media (max-width: 768px) {
+  .g-chat-main-wrapper {
+    max-width: 100% !important;
+    margin: 0 !important;
+    height: 100vh !important;
+    height: 100dvh !important;
+    border-radius: 0 !important;
+    border: none !important;
+  }
+  .g-chat-header { padding: 18px 20px !important; }
+  .g-chat-input-form-bar { padding: 18px 20px !important; }
+  .g-chat-display-window { padding: 20px !important; }
+  .g-chat-text-bubble { max-width: 90% !important; }
+}

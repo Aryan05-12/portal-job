@@ -1,0 +1,706 @@
+/* Master Styling for Corporate Registration */
+.emp-reg-global-wrapper {
+  background-color: #f8fafc;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  color: #0f172a;
+  margin-top: 50px;
+}
+
+.emp-reg-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+/* Page Header Hero */
+.emp-reg-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.emp-reg-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: #edf2ff;
+  color: #4f46e5;
+  padding: 0.4rem 1rem;
+  border-radius: 30px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+}
+
+.emp-reg-header h1 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 0.5rem 0;
+  letter-spacing: -0.03em;
+}
+
+.emp-reg-header p {
+  color: #64748b;
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* Account Notification Sign In Banner */
+.emp-reg-banner {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: #ffffff;
+  padding: 1.75rem;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.05);
+}
+
+.emp-reg-banner-text h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0 0 0.35rem 0;
+}
+
+.emp-reg-banner-text p {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.emp-reg-signin-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #10b981;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  transition: all 0.2s;
+}
+
+.emp-reg-signin-btn:hover {
+  background: #059669;
+  transform: translateY(-2px);
+}
+
+/* Registration Main Card Form */
+.emp-reg-form {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+.emp-reg-section-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #334155;
+  margin: 0 0 1.5rem 0;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px dashed #e2e8f0;
+}
+
+/* Balanced Form Grid Control */
+.emp-reg-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.emp-reg-full-width {
+  grid-column: span 2;
+}
+
+.emp-reg-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.emp-reg-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #475569;
+}
+
+.emp-reg-group label svg {
+  color: #94a3b8;
+}
+
+.emp-req {
+  color: #ef4444;
+  margin-left: 2px;
+}
+
+/* Sleek Core Inputs */
+.emp-reg-input-box input,
+.emp-reg-input-box textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  color: #0f172a;
+  box-sizing: border-box;
+  font-family: inherit;
+  transition: all 0.2s ease;
+}
+
+.emp-reg-input-box textarea {
+  resize: vertical;
+}
+
+/* Green Pulse Focus Indicator */
+.emp-reg-input-box input:focus,
+.emp-reg-input-box textarea:focus {
+  outline: none;
+  background-color: #ffffff;
+  border-color: #10b981;
+  box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.1);
+}
+
+/* Drag & Drop File Upload Frame */
+.emp-reg-file-upload-card {
+  position: relative;
+  border: 2px dashed #cbd5e1;
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  transition: all 0.2s ease;
+}
+
+.emp-reg-file-upload-card:hover {
+  border-color: #4f46e5;
+  background: #f5f3ff;
+}
+
+.emp-reg-upload-icon {
+  color: #94a3b8;
+  transition: color 0.2s;
+}
+
+.emp-reg-file-upload-card:hover .emp-reg-upload-icon {
+  color: #4f46e5;
+}
+
+.emp-reg-upload-text {
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+.emp-reg-upload-highlight {
+  color: #4f46e5;
+  font-weight: 600;
+}
+
+.emp-reg-upload-text small {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+.emp-reg-hidden-file-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Real-time Parsed Preview Box */
+.emp-reg-logo-preview-box {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  margin-top: 0.5rem;
+}
+
+.emp-reg-logo-preview-box img {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.emp-reg-logo-preview-box div {
+  display: flex;
+  flex-direction: column;
+}
+
+.emp-reg-logo-preview-box span {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #166534;
+}
+
+.emp-reg-logo-preview-box small {
+  font-size: 0.75rem;
+  color: #15803d;
+}
+
+/* Dynamic Notification System alerts */
+.emp-reg-alert {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.emp-reg-alert p {
+  margin: 0;
+}
+
+.emp-reg-alert-success {
+  background: #f0fdf4;
+  color: #166534;
+  border: 1px solid #bbf7d0;
+}
+
+.emp-reg-alert-error {
+  background: #fef2f2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+}
+
+/* Form Submit Button and Animations */
+.emp-reg-btn-box {
+  margin-top: 2rem;
+}
+
+.emp-reg-submit-btn {
+  width: 100%;
+  background: #4f46e5;
+  color: #ffffff;
+  border: none;
+  padding: 0.9rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  letter-spacing: 0.03em;
+  transition: all 0.2s ease;
+}
+
+.emp-reg-submit-btn:hover:not(:disabled) {
+  background: #4338ca;
+  box-shadow: 0 4px 15px rgba(79, 70, 229, 0.25);
+  transform: translateY(-1px);
+}
+
+.emp-reg-submit-btn:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+}
+
+.emp-reg-spinner {
+  animation: emp-spin 1s infinite linear;
+}
+
+@keyframes emp-spin {
+  100% { transform: rotate(360deg); }
+}
+
+/* Grid Breakdown for Tablets & Mobile Screens */
+@media (max-width: 768px) {
+  .emp-reg-grid {
+    grid-template-columns: 1fr;
+  }
+  .emp-reg-full-width {
+    grid-column: span 1;
+  }
+  .emp-reg-banner {
+    flex-direction: column;
+    text-align: center;
+  }
+  .emp-reg-signin-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .emp-reg-form {
+    padding: 1.5rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Core Styling Shell */
+.sk-reg-global-wrapper {
+  background-color: #f8fafc;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  color: #1e293b;
+}
+
+.sk-reg-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 3.5rem 1.5rem;
+}
+
+/* Elegant Portal Title Banner */
+.sk-reg-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.sk-reg-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: #e0e7ff;
+  color: #4338ca;
+  padding: 0.4rem 1.1rem;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-bottom: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.sk-reg-header h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 0.5rem 0;
+  letter-spacing: -0.03em;
+}
+
+.sk-reg-header p {
+  color: #64748b;
+  font-size: 1.05rem;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* Horizontal Sign-In Directive Ribbon */
+.sk-reg-account-banner {
+  background: linear-gradient(135deg, #4f46e5 0%, #3730a3 100%);
+  color: #ffffff;
+  padding: 2rem;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 12px 30px rgba(79, 70, 229, 0.15);
+}
+
+.sk-reg-banner-text h2 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin: 0 0 0.4rem 0;
+}
+
+.sk-reg-banner-text p {
+  font-size: 0.9rem;
+  color: #e0e7ff;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.sk-reg-signin-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #ffffff;
+  color: #4f46e5;
+  text-decoration: none;
+  padding: 0.85rem 1.75rem;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sk-reg-signin-btn:hover {
+  background: #f8fafc;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* The Main Dynamic Sheet Dashboard */
+.sk-reg-form {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.01);
+}
+
+/* Balanced Spacious Grid Structure */
+.sk-reg-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.sk-reg-full-width {
+  grid-column: span 2;
+}
+
+.sk-reg-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.sk-reg-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #475569;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.sk-reg-group label svg {
+  color: #94a3b8;
+}
+
+.sk-req {
+  color: #ef4444;
+}
+
+/* Refined Form Input Elements */
+.sk-reg-input-wrapper input {
+  width: 100%;
+  padding: 0.9rem 1.2rem;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  color: #0f172a;
+  box-sizing: border-box;
+  font-family: inherit;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Modern Electric Focus Ring */
+.sk-reg-input-wrapper input:focus {
+  outline: none;
+  background-color: #ffffff;
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
+}
+
+/* Premium Dashboard Style File Upload Boxes */
+.sk-reg-upload-card {
+  position: relative;
+  border: 2px dashed #cbd5e1;
+  background: #f8fafc;
+  border-radius: 14px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.sk-reg-upload-card:hover {
+  border-color: #4f46e5;
+  background: #f5f3ff;
+}
+
+.sk-reg-upload-icon { color: #f59e0b; }
+.sk-reg-upload-icon-alt { color: #3b82f6; }
+
+.sk-reg-upload-label-text {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.sk-reg-upload-primary {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+.sk-reg-upload-label-text small {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  margin-top: 1px;
+}
+
+.sk-reg-hidden-file-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+/* Uploaded States Asset Indicators */
+.sk-reg-preview-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: #fffbeb;
+  border: 1px solid #fef3c7;
+  padding: 0.5rem 0.75rem;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #b45309;
+}
+
+.sk-reg-preview-badge img {
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+}
+
+.sk-reg-file-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #eff6ff;
+  border: 1px solid #dbeafe;
+  padding: 0.6rem 0.9rem;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #1d4ed8;
+}
+
+/* System Alerts Feedback UI */
+.sk-reg-alert {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.sk-reg-alert p { margin: 0; }
+.sk-alert-success { background: #f0fdf4; color: #15803d; border: 1px solid #bbf7d0; }
+.sk-alert-error { background: #fef2f2; color: #b91c1c; border: 1px solid #fecaca; }
+
+/* Elegant Main Master Action Button */
+.sk-reg-submit-btn {
+  width: 100%;
+  background: #0f172a;
+  color: #ffffff;
+  border: none;
+  padding: 1.1rem;
+  border-radius: 14px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  letter-spacing: 0.05em;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sk-reg-submit-btn:hover:not(:disabled) {
+  background: #1e293b;
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.25);
+  transform: translateY(-1px);
+}
+
+.sk-reg-submit-btn:disabled {
+  background: #cbd5e1;
+  color: #94a3b8;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.sk-reg-spinner {
+  animation: sk-spin 1s infinite linear;
+}
+
+@keyframes sk-spin {
+  100% { transform: rotate(360deg); }
+}
+
+/* Micro Grid Adaptive Layout Rules */
+@media (max-width: 768px) {
+  .sk-reg-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .sk-reg-full-width {
+    grid-column: span 1;
+  }
+  .sk-reg-account-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+  }
+  .sk-reg-signin-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .sk-reg-form {
+    padding: 1.75rem;
+  }
+}

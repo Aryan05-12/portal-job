@@ -1,0 +1,550 @@
+/* ============================================
+   RESET & BASE
+============================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.admin-dashboard-main {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #f1f5f9;
+  padding: 24px 32px 32px 32px;
+  display: block;
+  min-height: 100vh;
+  overflow-y: auto;
+}
+
+.admin-dashboard-main::-webkit-scrollbar {
+  width: 6px;
+}
+.admin-dashboard-main::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+}
+
+/* ============================================
+   HEADER - BADA
+============================================ */
+.admin-dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  padding: 16px 24px;
+  border-radius: 14px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  margin-bottom: 24px;
+}
+
+.header-title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.admin-badge {
+  background: #dcfce7;
+  padding: 6px 16px;
+  border-radius: 24px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #16a34a;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.admin-dashboard-header h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.notification-bell-icon {
+  background: #f1f5f9;
+  padding: 8px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+  cursor: pointer;
+  position: relative;
+}
+
+.bell-dot {
+  width: 8px;
+  height: 8px;
+  background: #ef4444;
+  border-radius: 50%;
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  border: 2px solid #ffffff;
+}
+
+.admin-profile-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #e2e8f0;
+}
+.admin-profile-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ============================================
+   LOADING & ERROR
+============================================ */
+.admin-loading-screen {
+  text-align: center;
+  padding: 60px 0;
+  color: #16a34a;
+  font-size: 18px;
+}
+.admin-spinner {
+  animation: spin 0.9s linear infinite;
+  width: 36px;
+  height: 36px;
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.admin-error-card {
+  background: #fee2e2;
+  padding: 14px 20px;
+  border-radius: 12px;
+  color: #dc2626;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+/* ============================================
+   TOP 3 CARDS - BADE
+============================================ */
+.stats-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 24px;
+}
+
+.admin-dashboard-stats {
+  display: flex;
+  gap: 16px;
+  width: 75%;
+}
+
+.admin-dashboard-stat {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 14px 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  min-height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  transition: 0.2s;
+}
+.admin-dashboard-stat:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.10);
+}
+
+.main-card-green {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: #ffffff;
+}
+.main-card-green .see-details-txt {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.card-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stat-icon-wrapper-white {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 6px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+}
+
+.stat-text-white strong {
+  font-size: 22px;
+  font-weight: 700;
+  display: block;
+  line-height: 1.2;
+}
+.stat-text-white span {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.mini-stat {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.stat-icon-wrapper {
+  padding: 6px;
+  border-radius: 8px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.orange-bg {
+  background: #fef3c7;
+  color: #d97706;
+}
+.yellow-bg {
+  background: #fef9c3;
+  color: #a16207;
+}
+
+.stat-text strong {
+  font-size: 20px;
+  font-weight: 700;
+  color: #0f172a;
+  display: block;
+  line-height: 1.2;
+}
+.stat-text span {
+  font-size: 12px;
+  color: #64748b;
+}
+
+/* ============================================
+   CHART - BADA AUR HEIGHT ZYADA
+============================================ */
+.admin-chart-section {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 20px 24px 14px 24px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  margin-bottom: 28px;
+  width: 100%;
+}
+
+.chart-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.chart-header-row h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.live-pill {
+  font-size: 11px;
+  font-weight: 600;
+  color: #16a34a;
+  background: #dcfce7;
+  padding: 4px 14px;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.pulse-point {
+  width: 7px;
+  height: 7px;
+  background: #22c55e;
+  border-radius: 50%;
+  animation: pulse 1.4s infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(1.3); }
+}
+
+.chart-container-large {
+  height: 220px;
+  width: 100%;
+}
+
+/* ============================================
+   ACTIVE CORE PIPELINES - BADA
+============================================ */
+.admin-dashboard-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 18px 24px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  margin-bottom: 28px;
+  width: 100%;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.card-header h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.card-count-badge {
+  background: #f1f5f9;
+  padding: 2px 14px;
+  border-radius: 24px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #64748b;
+}
+
+.card-content-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.admin-dashboard-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 16px;
+  border-radius: 10px;
+  background: #f8fafc;
+  transition: 0.2s;
+}
+.admin-dashboard-row:hover {
+  background: #f1f5f9;
+}
+
+.row-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.job-icon-box {
+  padding: 6px;
+  border-radius: 8px;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.green-bg-light {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.row-details strong {
+  font-size: 15px;
+  font-weight: 600;
+  color: #0f172a;
+}
+.row-details {
+  display: flex;
+  flex-direction: column;
+}
+.category-pill {
+  font-size: 10px;
+  padding: 0px 10px;
+  border-radius: 12px;
+  font-weight: 500;
+  width: fit-content;
+}
+.orange-pill {
+  background: #fef3c7;
+  color: #d97706;
+}
+
+.row-right .geo-tag {
+  font-size: 12px;
+  color: #64748b;
+  background: #f1f5f9;
+  padding: 2px 12px;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* ============================================
+   LATEST INGRESS LOGS - BADA
+============================================ */
+.listings-widget {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 18px 24px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  width: 100%;
+}
+
+.widget-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+.widget-header h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.sidebar-user-list-horizontal {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 10px;
+}
+
+.sidebar-user-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 14px;
+  border-radius: 10px;
+  background: #f8fafc;
+  transition: 0.2s;
+}
+.sidebar-user-card:hover {
+  background: #f1f5f9;
+}
+
+.avatar-wrapper {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+}
+.user-row-avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #e2e8f0;
+}
+.online-status-indicator {
+  width: 10px;
+  height: 10px;
+  background: #22c55e;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -1px;
+  right: -1px;
+  border: 2px solid #ffffff;
+}
+
+.user-card-info h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #0f172a;
+}
+.user-card-info p {
+  font-size: 12px;
+  color: #64748b;
+  margin: 0;
+}
+
+.no-data-text {
+  font-size: 14px;
+  color: #94a3b8;
+  padding: 14px 0;
+  text-align: center;
+}
+
+/* ============================================
+   ANIMATIONS
+============================================ */
+.animate-card {
+  opacity: 0;
+  animation: fadeUp 0.4s ease forwards;
+}
+.delay-1 { animation-delay: 0.05s; }
+.delay-2 { animation-delay: 0.10s; }
+.delay-3 { animation-delay: 0.15s; }
+.delay-4 { animation-delay: 0.20s; }
+
+@keyframes fadeUp {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ============================================
+   RESPONSIVE
+============================================ */
+@media (max-width: 1024px) {
+  .admin-dashboard-stats {
+    width: 100%;
+  }
+  .sidebar-user-list-horizontal {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-dashboard-stats {
+    flex-wrap: wrap;
+  }
+  .admin-dashboard-stat {
+    min-width: 30%;
+    flex: 1;
+  }
+  .admin-dashboard-main {
+    padding: 16px 18px;
+  }
+  .chart-container-large {
+    height: 170px;
+  }
+  .sidebar-user-list-horizontal {
+    grid-template-columns: 1fr;
+  }
+  .admin-dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .header-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .admin-dashboard-stats {
+    flex-direction: column;
+  }
+  .admin-dashboard-header h1 {
+    font-size: 18px;
+  }
+  .chart-container-large {
+    height: 140px;
+  }
+}

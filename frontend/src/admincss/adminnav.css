@@ -1,0 +1,1131 @@
+/* Container Layout - Deep Space Slate (Ultra Premium & Clean) */
+.custom-adm-nav-sidebar {
+  width: 265px;
+  height: 100vh;
+  background: linear-gradient(185deg, #0f172a 0%, #090d16 100%); /* High-end dark slate depth */
+  color: #94a3b8;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  box-shadow: 10px 0 40px rgba(0, 0, 0, 0.4);
+  border-right: 1px solid rgba(255, 255, 255, 0.03); /* Razor-thin premium border */
+  padding-bottom: 20px;
+  z-index: 999;
+}
+
+.custom-adm-nav-header {
+  padding: 28px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.custom-adm-nav-brand-text {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 0.12em;
+  background: linear-gradient(120deg, #ffffff, #94a3b8);
+  -webkit-text-fill-color: transparent;
+}
+
+.custom-adm-nav-badge {
+  background: linear-gradient(135deg, rgba(20, 184, 166, 0.2) 0%, rgba(20, 184, 166, 0.05) 100%);
+  color: #2dd4bf; /* Electric Neon Teal */
+  font-size: 0.65rem;
+  font-weight: 800;
+  padding: 3px 10px;
+  border-radius: 30px; /* Fluid capsule pill shape */
+  letter-spacing: 0.06em;
+  border: 1px solid rgba(20, 184, 166, 0.3);
+  box-shadow: 0 0 15px rgba(20, 184, 166, 0.1);
+}
+
+/* User Box - High-End Floating Translucent Glass Card */
+.custom-adm-nav-userbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 16px;
+  background: rgba(30, 41, 59, 0.3); /* Cyber glassmorphism overlay */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  margin: 20px 18px;
+  border-radius: 20px; /* Perfectly smooth curved premium square edges */
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.custom-adm-nav-avatar-wrapper {
+  position: relative;
+  margin-bottom: 12px;
+}
+
+/* Avatar - Smooth Continuous Rounded Circle */
+.custom-adm-nav-avatar {
+  width: 62px;
+  height: 62px;
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  border-radius: 50%; /* Perfect Circle Shape */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #2dd4bf; /* Neon Glow Ring */
+  box-shadow: 0 0 20px rgba(45, 212, 191, 0.3);
+}
+
+.custom-adm-nav-avatar svg {
+  color: #2dd4bf;
+  width: 46%;
+  height: 46%;
+}
+
+/* Pulse Live Status Dot */
+.custom-adm-nav-status-dot {
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  width: 12px;
+  height: 12px;
+  background-color: #10b981; /* Premium Active Green */
+  border-radius: 50%;
+  border: 2.5px solid #0f172a;
+  box-shadow: 0 0 10px #10b981;
+}
+
+.custom-adm-nav-user-details {
+  text-align: center;
+  margin-bottom: 14px;
+}
+
+.custom-adm-nav-name {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.02em;
+}
+
+.custom-adm-nav-role {
+  font-size: 0.72rem;
+  color: #64748b;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 2px;
+}
+
+.custom-adm-nav-actions {
+  display: flex;
+  gap: 18px;
+}
+
+.custom-adm-nav-btn {
+  background: transparent;
+  border: 0;
+  color: #475569;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.custom-adm-nav-btn:hover {
+  color: #2dd4bf;
+  transform: translateY(-2px);
+}
+
+.custom-adm-nav-btn--logout:hover {
+  color: #f87171; /* Warning Crimson soft glow */
+  text-shadow: 0 0 10px rgba(248, 113, 113, 0.3);
+}
+
+/* Nav Menu Interface */
+.custom-adm-nav-menu {
+  list-style: none;
+  padding: 0 14px;
+  margin: 0;
+  overflow-y: auto;
+}
+
+.custom-adm-nav-item {
+  margin-bottom: 6px;
+}
+
+/* Premium Rounded Links */
+.custom-adm-nav-link {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 13px 16px;
+  color: #94a3b8; /* Muted slate for clean hierarchy */
+  text-decoration: none;
+  font-size: 0.84rem;
+  font-weight: 600;
+  border: none;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 14px; /* Super premium smooth corners */
+  position: relative;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.custom-adm-nav-icon {
+  margin-right: 14px;
+  font-size: 1.05rem;
+  width: 22px;
+  transition: transform 0.2s;
+}
+
+.custom-adm-nav-text {
+  flex-grow: 1;
+  letter-spacing: 0.03em;
+}
+
+/* Modern Minimal Hover State */
+.custom-adm-nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.03);
+  color: #ffffff;
+}
+
+/* Active State Design - Luxurious Dark Blue-Teal Canvas */
+.custom-adm-nav-link.is-active,
+.custom-adm-nav-link.has-dropdown-open {
+  background: linear-gradient(90deg, rgba(20, 184, 166, 0.15) 0%, rgba(20, 184, 166, 0.02) 100%);
+  color: #2dd4bf; /* Text glows electric teal */
+}
+
+/* Glowing Indicator Dot beside active tabs */
+.custom-adm-nav-link.is-active::before {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 6px;
+  width: 6px;
+  background-color: #2dd4bf;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #2dd4bf;
+}
+
+/* Micro Shift text when active */
+.custom-adm-nav-link.is-active .custom-adm-nav-icon {
+  margin-left: 6px;
+}
+
+/* Rotating Smooth Arrow Code */
+.custom-adm-nav-caret {
+  font-size: 1.3rem;
+  color: #475569;
+  display: inline-block;
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: rotate(0deg);
+}
+
+.custom-adm-nav-caret.is-rotated {
+  transform: rotate(-90deg);
+  color: #2dd4bf;
+}
+
+/* Dropdown Drawer Glass Shell */
+.custom-adm-nav-drawer {
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.2); /* Deep interior tunnel effect */
+  transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 12px;
+  margin-top: 4px;
+}
+
+.custom-adm-nav-sublink {
+  display: block;
+  padding: 11px 16px 11px 52px;
+  color: #64748b;
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.custom-adm-nav-sublink:hover {
+  color: #ffffff;
+  background-color: rgba(20, 184, 166, 0.08); /* Soft splash on link items hover */
+  padding-left: 56px; /* High-end micro text push nudge */
+}
+
+
+
+
+
+/* Container jo form ko screen ke center mein align karega */
+.category-container-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 20px;
+}
+
+/* Card Wrapper jisme glassmorphism touch hai */
+.category-form-wrapper {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 450px;
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+}
+
+.category-form-wrapper:hover {
+  transform: translateY(-5px);
+}
+
+/* Form Title */
+.category-title-main {
+  margin-top: 0;
+  margin-bottom: 24px;
+  color: #333333;
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: -0.5px;
+}
+
+/* Input groups ke beech ka gap */
+.category-form-box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.category-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Labels style */
+.category-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #555555;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Input aur Textarea ki common styling */
+.category-input-field,
+.category-textarea-field {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e1e8ed;
+  border-radius: 8px;
+  font-size: 15px;
+  color: #333333;
+  background-color: #fcfcfc;
+  box-sizing: border-box;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.category-textarea-field {
+  resize: vertical; /* User height change kar sake par width nahi */
+}
+
+/* Focus state: Jab user click karega toh blueish glow aayega */
+.category-input-field:focus,
+.category-textarea-field:focus {
+  border-color: #4a90e2;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 4px rgba(74, 144, 226, 0.15);
+}
+
+/* Placeholder text color */
+.category-input-field::placeholder,
+.category-textarea-field::placeholder {
+  color: #aab8c2;
+}
+
+/* Premium Submit Button */
+.category-submit-btn {
+  background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
+  color: white;
+  border: none;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(74, 144, 226, 0.3);
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+/* Button Hover aur Active states */
+.category-submit-btn:hover {
+  background: linear-gradient(135deg, #357abd 0%, #285a8f 100%);
+  box-shadow: 0 6px 20px rgba(74, 144, 226, 0.4);
+  transform: translateY(-1px);
+}
+
+.category-submit-btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 10px rgba(74, 144, 226, 0.3);
+}
+
+.admin-dashboard-main {
+  margin-left: 265px;
+  min-height: 100vh;
+  background: #f8fafc;
+  padding: 34px;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: #0f172a;
+}
+
+
+/* All Users Component Container */
+.au-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  margin-left: 300px;
+}
+
+.au-title {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.au-summary {
+  margin-bottom: 25px;
+  font-size: 16px;
+}
+
+/* Unique Table Design */
+.au-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.au-table th, 
+.au-table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+}
+
+.au-table th {
+  background-color: #f4f6f9;
+  color: #333;
+  font-weight: bold;
+}
+
+.au-table tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+/* Action Buttons Flexbox Wrapper */
+.au-action-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+/* Unique Buttons Styling */
+.au-btn-edit, 
+.au-btn-delete {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.au-btn-edit {
+  background-color: #ffc107;
+  color: #000;
+}
+
+.au-btn-edit:hover {
+  background-color: #e0a800;
+}
+
+.au-btn-delete {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.au-btn-delete:hover {
+  background-color: #c82333;
+}
+
+/* No Data Found Styling */
+.au-no-data {
+  text-align: center;
+  color: #777;
+  font-style: italic;
+}
+
+/* Clean admin navigation theme */
+.custom-adm-nav-sidebar {
+  background: #111827;
+  color: #cbd5e1;
+  box-shadow: 8px 0 24px rgba(15, 23, 42, 0.18);
+  border-right: 1px solid #243041;
+}
+
+.custom-adm-nav-header {
+  justify-content: space-between;
+}
+
+.custom-adm-nav-brand-text {
+  background: none;
+  -webkit-text-fill-color: #ffffff;
+  letter-spacing: 0;
+}
+
+.custom-adm-nav-badge {
+  background: #e0f2fe;
+  border: 1px solid #bae6fd;
+  color: #0369a1;
+  border-radius: 6px;
+  box-shadow: none;
+}
+
+.custom-adm-nav-userbox {
+  background: #1f2937;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  box-shadow: none;
+}
+
+.custom-adm-nav-avatar {
+  background: #0f172a;
+  border-color: #38bdf8;
+  box-shadow: none;
+}
+
+.custom-adm-nav-avatar svg,
+.custom-adm-nav-link.is-active,
+.custom-adm-nav-link.has-dropdown-open,
+.custom-adm-nav-caret.is-rotated {
+  color: #38bdf8;
+}
+
+.custom-adm-nav-status-dot {
+  background: #22c55e;
+  box-shadow: none;
+}
+
+.custom-adm-nav-actions {
+  gap: 10px;
+}
+
+.custom-adm-nav-btn {
+  background: #0f172a;
+  color: #cbd5e1;
+  border: 1px solid #334155;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 6px 8px;
+}
+
+.custom-adm-nav-link {
+  border-radius: 8px;
+  color: #cbd5e1;
+  padding: 12px 14px;
+}
+
+.custom-adm-nav-link:hover {
+  background: #1f2937;
+  color: #ffffff;
+}
+
+.custom-adm-nav-link.is-active,
+.custom-adm-nav-link.has-dropdown-open {
+  background: #0f2537;
+}
+
+.custom-adm-nav-link.is-active::before {
+  background: #38bdf8;
+  box-shadow: none;
+}
+
+.custom-adm-nav-icon {
+  width: 30px;
+  height: 26px;
+  margin-right: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 6px;
+  color: #93c5fd;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.custom-adm-nav-drawer {
+  background: #0f172a;
+  border-radius: 8px;
+}
+
+.custom-adm-nav-sublink {
+  color: #94a3b8;
+}
+
+.custom-adm-nav-sublink:hover {
+  background: #162033;
+  color: #ffffff;
+}
+
+.admin-page-editor-main {
+  margin-left: 265px;
+  min-height: 100vh;
+  background: #f8fafc;
+  padding: 34px;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: #0f172a;
+  margin-left: 300px;
+}
+
+.admin-page-editor-form {
+  max-width: 760px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+  padding: 24px;
+  display: grid;
+  gap: 18px;
+}
+
+.admin-page-editor-form label,
+.au-modal label {
+  display: grid;
+  gap: 8px;
+  color: #334155;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.admin-page-editor-form input,
+.admin-page-editor-form textarea,
+.au-modal input,
+.au-modal select {
+  width: 100%;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  padding: 11px 12px;
+  color: #0f172a;
+  font: inherit;
+  box-sizing: border-box;
+}
+
+.admin-page-editor-form input:focus,
+.admin-page-editor-form textarea:focus,
+.au-modal input:focus,
+.au-modal select:focus {
+  outline: 3px solid #dbeafe;
+  border-color: #2563eb;
+}
+
+.admin-editor-save-btn,
+.au-btn-save,
+.au-refresh-btn {
+  background: #2563eb;
+  color: #ffffff;
+  border: 0;
+  border-radius: 6px;
+  padding: 11px 16px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.admin-editor-save-btn:hover,
+.au-btn-save:hover,
+.au-refresh-btn:hover {
+  background: #1d4ed8;
+}
+
+.admin-editor-message,
+.au-message {
+  max-width: 760px;
+  margin-bottom: 16px;
+  padding: 12px 14px;
+  border-radius: 6px;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  color: #1e3a8a;
+  font-weight: 700;
+}
+
+/* All users table and modal */
+.au-container {
+  min-height: 100vh;
+  margin-left: 265px;
+  padding: 34px;
+  background: #f8fafc;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.au-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.au-title {
+  margin: 0 0 6px 0;
+  color: #0f172a;
+  font-size: 28px;
+}
+
+.au-summary {
+  margin: 0;
+  color: #64748b;
+}
+
+.au-loading {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 24px;
+  color: #64748b;
+}
+
+.au-table-wrap {
+  overflow-x: auto;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+}
+
+.au-table {
+  box-shadow: none;
+  min-width: 820px;
+}
+
+.au-table th {
+  background: #f1f5f9;
+  color: #334155;
+}
+
+.au-table th,
+.au-table td {
+  border: 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.au-btn-edit,
+.au-btn-delete,
+.au-btn-cancel {
+  border: 0;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.au-btn-edit {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.au-btn-edit:hover {
+  background: #bfdbfe;
+}
+
+.au-btn-delete {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.au-btn-delete:hover {
+  background: #fecaca;
+}
+
+.au-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  z-index: 1200;
+}
+
+.au-modal {
+  width: min(520px, 100%);
+  max-height: 92vh;
+  overflow-y: auto;
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 22px;
+  display: grid;
+  gap: 16px;
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.28);
+}
+
+.au-modal-header,
+.au-modal-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.au-modal-header h3 {
+  margin: 0;
+}
+
+.au-close-btn,
+.au-btn-cancel {
+  background: #f1f5f9;
+  color: #334155;
+}
+
+@media (max-width: 900px) {
+  .custom-adm-nav-sidebar {
+    position: static;
+    width: 100%;
+    height: auto;
+  }
+
+  .au-container,
+  .admin-page-editor-main {
+    margin-left: 0;
+    padding: 22px;
+  }
+
+  .au-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+
+
+
+
+
+
+/* ==========================================================================
+   PREMIUM NORDIC SLATE & ROYAL BLUE MIX SIDEBAR (anv-)
+   ========================================================================== */
+
+.anv-admin-sidebar {
+  width: 270px;
+  height: 100vh;
+  /* Premium Soft Slate Gradient Background */
+  background: linear-gradient(180deg, #f8fafc 0%, #e2e8f0 100%);
+  border-right: 1px solid #cbd5e1;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 1.2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  font-family: 'Inter', -apple-system, sans-serif;
+  box-shadow: 4px 0 20px rgba(15, 23, 42, 0.04);
+}
+
+/* Branding Presentation Layer */
+.anv-sidebar-header {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #cbd5e1;
+  margin-bottom: 1.25rem;
+}
+
+.anv-logo-mark {
+  /* Royal Cobalt Blue Logo Box */
+  background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
+  color: #ffffff;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 12px rgba(29, 78, 216, 0.3);
+}
+
+.anv-branding-text-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.anv-brand-main {
+  color: #0f172a; /* Deep Navy Text */
+  font-weight: 800;
+  font-size: 1.1rem;
+  letter-spacing: -0.02em;
+}
+
+.anv-brand-badge {
+  color: #1d4ed8; /* Electric Cobalt Accent */
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* User Account Meta Deck Box */
+.anv-profile-card {
+  display: flex;
+  align-items: center;
+  /* Clean contrast card overlay */
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  padding: 0.75rem;
+  border-radius: 14px;
+  margin-bottom: 1.5rem;
+  gap: 0.75rem;
+  position: relative;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+}
+
+.anv-avatar-cluster {
+  position: relative;
+}
+
+.anv-avatar-frame {
+  width: 38px;
+  height: 38px;
+  background: #eff6ff; /* Soft blue highlight */
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #bfdbfe;
+}
+
+.anv-avatar-fallback-icon {
+  color: #1e40af;
+}
+
+.anv-online-indicator {
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  width: 10px;
+  height: 10px;
+  background: #10b981;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #10b981;
+}
+
+.anv-user-info {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.anv-user-name {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.anv-user-status {
+  font-size: 0.75rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.anv-quick-actions {
+  display: flex;
+  gap: 0.35rem;
+}
+
+.anv-action-pill {
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #475569;
+  transition: all 0.2s ease;
+}
+
+.anv-action-pill:hover {
+  color: #1d4ed8;
+  border-color: #93c5fd;
+  background: #eff6ff;
+}
+
+.anv-action-pill.anv-pill-critical:hover {
+  color: #ef4444;
+  border-color: #fca5a5;
+  background: #fef2f2;
+}
+
+/* Navigation List Core System */
+.anv-navigation-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  overflow-y: auto;
+  flex-grow: 1;
+}
+
+/* Universal Button and Link States */
+.anv-menu-link {
+  width: 100%;
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.75rem 0.9rem;
+  color: #334155; /* Refined dark slate text */
+  font-size: 0.92rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.anv-menu-link svg {
+  color: #64748b;
+  transition: color 0.2s;
+}
+
+.anv-menu-link:hover,
+.anv-menu-link.anv-dropdown-expanded {
+  color: #1d4ed8;
+  background: rgba(29, 78, 216, 0.05); /* Soft Cobalt overlay on hover */
+}
+
+.anv-menu-link:hover svg,
+.anv-menu-link.anv-dropdown-expanded svg {
+  color: #1d4ed8;
+}
+
+/* Master Selected Active Route Blueprint */
+.anv-menu-link.anv-state-active {
+  color: #ffffff;
+  background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%); /* Full solid dynamic blue active item */
+  box-shadow: 0 4px 12px rgba(29, 78, 216, 0.2);
+}
+
+.anv-menu-link.anv-state-active svg {
+  color: #ffffff;
+}
+
+/* Accordion Component Mechanics */
+.anv-link-text {
+  flex-grow: 1;
+}
+
+.anv-accordion-arrow {
+  color: #64748b;
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.anv-menu-link.anv-state-active .anv-accordion-arrow {
+  color: #ffffff;
+}
+
+.anv-accordion-arrow.anv-rotate {
+  transform: rotate(180deg);
+  color: #1d4ed8;
+}
+
+.anv-menu-link.anv-state-active .anv-accordion-arrow.anv-rotate {
+  color: #ffffff;
+}
+
+/* Sliding Menu Drawers */
+.anv-drawer-submenu {
+  overflow: hidden;
+  transition: max-height 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding-left: 1.2rem;
+}
+
+.anv-submenu-sublink {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.6rem 0.9rem;
+  color: #475569;
+  font-size: 0.88rem;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.anv-sub-bullet {
+  width: 5px;
+  height: 5px;
+  background: #94a3b8;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.anv-submenu-sublink:hover {
+  color: #1d4ed8;
+  background: rgba(29, 78, 216, 0.04);
+}
+
+.anv-submenu-sublink:hover .anv-sub-bullet {
+  background: #1d4ed8;
+  transform: scale(1.3);
+}
+
+/* Active Inner Dropdown Route */
+.anv-submenu-sublink.anv-sub-active {
+  color: #1d4ed8;
+  font-weight: 700;
+}
+
+.anv-submenu-sublink.anv-sub-active .anv-sub-bullet {
+  background: #1d4ed8;
+  box-shadow: 0 0 6px #1d4ed8;
+}
+
+/* Custom Scrollbar Optimization for Sidebar Menus */
+.anv-navigation-menu::-webkit-scrollbar {
+  width: 4px;
+}
+.anv-navigation-menu::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+}

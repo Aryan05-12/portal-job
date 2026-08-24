@@ -1,0 +1,322 @@
+/* ===== Container ===== */
+.editcat-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+  padding: 20px;
+}
+
+/* ===== Loading State ===== */
+.editcat-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.editcat-spinner {
+  animation: spin 1s linear infinite;
+  color: white;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ===== Card ===== */
+.editcat-card {
+  background: white;
+  border-radius: 24px;
+  padding: 40px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.editcat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+}
+
+/* ===== Header ===== */
+.editcat-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.editcat-back-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background: #f3f4f6;
+  border: none;
+  border-radius: 12px;
+  color: #4b5563;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.editcat-back-btn:hover {
+  background: #e5e7eb;
+  transform: translateX(-2px);
+}
+
+.editcat-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 28px;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0;
+}
+
+.editcat-title-icon {
+  color: #667eea;
+}
+
+/* ===== Error Message ===== */
+.editcat-error {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  background: #fef2f2;
+  border: 1px solid #fca5a5;
+  border-radius: 12px;
+  color: #dc2626;
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+/* ===== Form ===== */
+.editcat-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* ===== Field ===== */
+.editcat-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.editcat-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* ===== Input ===== */
+.editcat-input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.editcat-input-icon {
+  position: absolute;
+  left: 14px;
+  color: #9ca3af;
+  pointer-events: none;
+}
+
+.editcat-input {
+  width: 100%;
+  padding: 14px 14px 14px 44px;
+  border: 2px solid #e5e7eb;
+  border-radius: 14px;
+  font-size: 16px;
+  color: #1f2937;
+  background: #f9fafb;
+  transition: all 0.3s ease;
+}
+
+.editcat-input:focus {
+  outline: none;
+  border-color: #667eea;
+  background: white;
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+}
+
+.editcat-input::placeholder {
+  color: #9ca3af;
+}
+
+/* ===== Textarea ===== */
+.editcat-textarea-wrap {
+  position: relative;
+}
+
+.editcat-textarea-icon {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  color: #9ca3af;
+  pointer-events: none;
+}
+
+.editcat-textarea {
+  width: 100%;
+  padding: 14px 14px 14px 44px;
+  border: 2px solid #e5e7eb;
+  border-radius: 14px;
+  font-size: 16px;
+  color: #1f2937;
+  background: #f9fafb;
+  resize: vertical;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  min-height: 120px;
+}
+
+.editcat-textarea:focus {
+  outline: none;
+  border-color: #667eea;
+  background: white;
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+}
+
+.editcat-textarea::placeholder {
+  color: #9ca3af;
+}
+
+/* ===== Button ===== */
+.editcat-btn-wrap {
+  margin-top: 8px;
+}
+
+.editcat-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 16px 32px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 14px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.editcat-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+}
+
+.editcat-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.editcat-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.editcat-btn-spinner {
+  animation: spin 1s linear infinite;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 640px) {
+  .editcat-card {
+    padding: 24px;
+  }
+
+  .editcat-title {
+    font-size: 22px;
+  }
+
+  .editcat-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .editcat-back-btn {
+    justify-content: center;
+  }
+
+  .editcat-btn {
+    font-size: 16px;
+    padding: 14px 24px;
+  }
+}
+
+/* ===== Dark Mode Support ===== */
+@media (prefers-color-scheme: dark) {
+  .editcat-container {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  }
+
+  .editcat-card {
+    background: #1f2937;
+  }
+
+  .editcat-title {
+    color: #f3f4f6;
+  }
+
+  .editcat-label {
+    color: #d1d5db;
+  }
+
+  .editcat-input,
+  .editcat-textarea {
+    background: #374151;
+    border-color: #4b5563;
+    color: #f3f4f6;
+  }
+
+  .editcat-input:focus,
+  .editcat-textarea:focus {
+    background: #374151;
+    border-color: #667eea;
+  }
+
+  .editcat-input::placeholder,
+  .editcat-textarea::placeholder {
+    color: #6b7280;
+  }
+
+  .editcat-back-btn {
+    background: #374151;
+    color: #d1d5db;
+  }
+
+  .editcat-back-btn:hover {
+    background: #4b5563;
+  }
+
+  .editcat-error {
+    background: #7f1d1d;
+    border-color: #991b1b;
+    color: #fca5a5;
+  }
+
+  .editcat-input-icon,
+  .editcat-textarea-icon {
+    color: #6b7280;
+  }
+}

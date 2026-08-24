@@ -1,0 +1,86 @@
+.admin-login-page {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Soft premium light-blue gradient */
+    background: linear-gradient(135deg, #eef2f7 0%, #dfe7f2 100%);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.admin-login-box {
+    width: 400px;
+    background: #ffffff;
+    padding: 50px 40px;
+    border-radius: 20px;
+    /* Rich, modern layered shadow - gives high-end look without being dark */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 
+                0 20px 25px -5px rgba(148, 163, 184, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.admin-login-box h1 {
+    text-align: center;
+    margin-bottom: 35px;
+    color: #0f172a; /* Slate 900 - very premium dark title */
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.admin-login-box form {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.admin-login-box input {
+    width: 100%;
+    padding: 15px 18px;
+    background: #f8fafc;
+    /* Soft border that feels elegant */
+    border: 1.5px solid #e2e8f0;
+    border-radius: 12px;
+    outline: none;
+    font-size: 15px;
+    color: #1e293b;
+    box-sizing: border-box;
+    transition: all 0.25s ease;
+}
+
+.admin-login-box input::placeholder {
+    color: #94a3b8;
+}
+
+/* Elegant and subtle focus indicator */
+.admin-login-box input:focus {
+    border-color: #3b82f6;
+    background: #ffffff;
+    /* Very soft blue tint layout instead of sharp glow */
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.08);
+}
+
+.admin-login-box button {
+    margin-top: 10px;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    /* Clean Royal Blue - very professional */
+    background: #2563eb;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* Minimal but satisfying micro-interaction */
+.admin-login-box button:hover {
+    background: #1d4ed8;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+.admin-login-box button:active {
+    transform: scale(0.98); /* Chota sa click effect */
+}

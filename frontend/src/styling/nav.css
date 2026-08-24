@@ -1,0 +1,178 @@
+/* Premium Glassmorphic Sticky Navbar */
+
+*{
+  margin: 0px;
+  padding: 0ps;
+}
+
+
+.nv-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+  padding: 0.85rem 0;
+  font-family: 'Inter', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.nv-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Brand Logo Layout */
+.nv-logo-block {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.03em;
+}
+
+.nv-logo-icon {
+  background: linear-gradient(135deg, #4f46e5 0%, #4338ca 100%);
+  color: #ffffff;
+  padding: 0.5rem;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(79, 70, 229, 0.2);
+}
+
+.nv-logo-accent {
+  color: #10b981; /* Main Dynamic Green Brand Color */
+}
+
+/* Elite Spacious Links Menu */
+.nv-menu {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nv-link {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  text-decoration: none;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #64748b;
+  padding: 0.5rem 0.85rem;
+  border-radius: 8px;
+  transition: all 0.2s ease-in-out;
+}
+
+.nv-link svg {
+  color: #94a3b8;
+  transition: color 0.2s ease;
+}
+
+/* Hover States with Smooth Mint Green Highlight */
+.nv-link:hover {
+  color: #10b981;
+  background-color: #f0fdf4;
+}
+
+.nv-link:hover svg {
+  color: #10b981;
+}
+
+/* Active Link Marker Logic */
+.nv-active .nv-link {
+  color: #4f46e5;
+  background-color: #edf2ff;
+}
+
+.nv-active .nv-link svg {
+  color: #4f46e5;
+}
+
+/* Profile Actions Layout */
+.nv-actions-area {
+  display: flex;
+  align-items: center;
+}
+
+/* Premium Rounded Image Avatar with Status Glow */
+.nv-profile-wrapper {
+  text-decoration: none;
+  display: block;
+  transition: transform 0.2s ease;
+}
+
+.nv-profile-wrapper:hover {
+  transform: scale(1.05);
+}
+
+.nv-avatar-ring {
+  padding: 2px;
+  background: linear-gradient(135deg, #10b981 0%, #4f46e5 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nv-photo {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ffffff;
+}
+
+/* Letter Avatar fallback styling */
+.nv-letter-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #edf2ff 0%, #d1fae5 100%);
+  color: #4f46e5;
+  font-weight: 700;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #cbd5e1;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* Sign In CTA Option if no context is found */
+.nv-login-btn {
+  text-decoration: none;
+  background: #0f172a;
+  color: #ffffff;
+  padding: 0.55rem 1.25rem;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.nv-login-btn:hover {
+  background: #1e293b;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
+}
+
+/* Responsive breakpoints */
+@media (max-width: 900px) {
+  .nv-menu {
+    display: none; /* Mobile optimization handles toggle externally */
+  }
+}

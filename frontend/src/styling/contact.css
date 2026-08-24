@@ -1,0 +1,149 @@
+/* Base Container */
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+  background-color: #f7f9fc;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Blue Top Header */
+.contact-header {
+  background-color: #2196f3;
+  width: 100%;
+  padding: 50px 20px 90px 20px;
+  text-align: center;
+}
+
+.contact-header h1 {
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 2.2rem;
+  margin: 0;
+}
+
+.contact-header p {
+  color: #e0f2fe;
+  max-width: 720px;
+  margin: 14px auto 0;
+  font-size: 1rem;
+}
+
+.contact-header span {
+  display: block;
+  color: #f8fafc;
+  max-width: 720px;
+  margin: 10px auto 0;
+  line-height: 1.6;
+}
+
+/* Info Card Box */
+.contact-card {
+  background: #ffffff;
+  border-radius: 6px;
+  padding: 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  width: 100%;
+  max-width: 500px;
+  margin-top: -50px; /* Moves card over the blue background */
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Individual Row Layout */
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Icon Round Wrapper */
+.contact-icon {
+  background-color: #e3f2fd;
+  color: #1565c0;
+  font-weight: 800;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Text Information */
+.contact-info h3 {
+  font-size: 1.1rem;
+  color: #222222;
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+.contact-info p {
+  font-size: 0.95rem;
+  color: #555555;
+  margin: 0;
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+  .contact-card {
+    padding: 25px;
+    width: 90%;
+  }
+}
+
+.public-page-container {
+  min-height: 100vh;
+  background: #f8fafc;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.public-page-hero {
+  background: #1565c0;
+  color: #ffffff;
+  padding: 70px 24px 90px;
+  text-align: center;
+}
+
+.public-page-hero span {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: #bfdbfe;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.82rem;
+}
+
+.public-page-hero h1 {
+  margin: 0;
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+.public-page-hero p {
+  max-width: 760px;
+  margin: 16px auto 0;
+  color: #e0f2fe;
+  line-height: 1.7;
+}
+
+.public-page-content {
+  width: min(860px, calc(100% - 32px));
+  margin: -42px auto 0;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+  padding: 34px;
+}
+
+.public-page-content p {
+  margin: 0;
+  color: #334155;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}

@@ -1,0 +1,345 @@
+/* ==========================================================================
+   PREMIUM LIGHT GLASSMORPHIC NAVBAR (jnv-platform-)
+   ========================================================================== */
+
+/* Core Structural Shell */
+
+
+*{
+  margin: 0;
+}
+.jnv-platform-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.8); /* Pure Crisp Light Glassmorphic Background */
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  padding: 0.75rem 4rem;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.06); /* Sophisticated thin light border */
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  font-family: 'Inter', -apple-system, sans-serif;
+  box-shadow: 0 4px 30px rgba(15, 23, 42, 0.02);
+}
+
+/* Futuristic Brand Typography System */
+.jnv-platform-logo-zone {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.jnv-platform-graphic-cube {
+  position: relative;
+  background: #0f172a; /* Sharp dark contrast box for logo */
+  color: #ffffff;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 1.15rem;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
+}
+
+.jnv-platform-cube-glow {
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  z-index: -1;
+  border-radius: 12px;
+  opacity: 0.2; /* Subtle tech glow for light theme */
+  filter: blur(6px);
+  transition: opacity 0.3s;
+}
+
+.jnv-platform-logo-zone:hover .jnv-platform-cube-glow {
+  opacity: 0.6;
+}
+
+.jnv-platform-logo-text {
+  color: #0f172a; /* Dark typography for crisp readability */
+  font-weight: 800;
+  font-size: 1.25rem;
+  letter-spacing: -0.03em;
+}
+
+.jnv-platform-text-gradient {
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Balanced Navigation Links segment */
+.jnv-platform-links-segment {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.jnv-platform-dropdown-anchor {
+  position: relative;
+}
+
+.jnv-platform-nav-btn {
+  background: transparent;
+  border: none;
+  color: #475569; /* Balanced slate text */
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.jnv-platform-nav-btn:hover, 
+.jnv-platform-nav-btn.jnv-platform-state-active {
+  color: #4f46e5; /* Active Indigo State */
+  background: rgba(79, 70, 229, 0.06); /* Soft Indigo Wash background */
+}
+
+/* Micro Interaction Indicators */
+.jnv-platform-chevron {
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  color: #94a3b8;
+}
+
+.jnv-platform-nav-btn:hover .jnv-platform-chevron,
+.jnv-platform-nav-btn.jnv-platform-state-active .jnv-platform-chevron {
+  color: #4f46e5;
+}
+
+.jnv-platform-chevron.jnv-platform-rotate-up {
+  transform: rotate(180deg);
+}
+
+/* Premium Light Flyout Dropdowns */
+.jnv-platform-flyout-card {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 14px;
+  min-width: 200px;
+  padding: 0.5rem;
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08); /* Soft deep shadow */
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  animation: jnv-slide-up 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.jnv-platform-flyout-item {
+  color: #475569;
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 500;
+  padding: 0.7rem 0.9rem;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  transition: all 0.2s ease;
+}
+
+.jnv-platform-flyout-item:hover {
+  background: rgba(79, 70, 229, 0.05);
+  color: #4f46e5;
+  transform: translateX(4px);
+}
+
+.jnv-platform-indicator-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+.jnv-platform-indicator-dot.blue { background: #3b82f6; box-shadow: 0 0 6px rgba(59, 130, 246, 0.4); }
+.jnv-platform-indicator-dot.purple { background: #a855f7; box-shadow: 0 0 6px rgba(168, 85, 247, 0.4); }
+
+/* Right Profile Actions Segment Configuration */
+.jnv-platform-actions-segment {
+  display: flex;
+  align-items: center;
+}
+
+.jnv-platform-account-anchor {
+  position: relative;
+}
+
+.jnv-platform-profile-pill {
+  background: rgba(15, 23, 42, 0.02);
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  padding: 0.45rem 1rem 0.45rem 0.5rem;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  transition: all 0.2s ease;
+}
+
+.jnv-platform-profile-pill:hover, 
+.jnv-platform-pill-active {
+  background: rgba(15, 23, 42, 0.05);
+  border-color: rgba(15, 23, 42, 0.12);
+}
+
+.jnv-platform-avatar-media {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.jnv-platform-avatar-text-fallback {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.jnv-platform-profile-name {
+  color: #1e293b;
+  font-size: 0.88rem;
+  font-weight: 600;
+  max-width: 110px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Advanced Dashboard Board Panel Setup */
+.jnv-platform-user-dropdown-board {
+  position: absolute;
+  top: calc(100% + 12px);
+  right: 0;
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  width: 240px;
+  border-radius: 16px;
+  padding: 0.6rem;
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.12);
+  display: flex;
+  flex-direction: column;
+  animation: jnv-slide-up 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.jnv-platform-user-profile-summary {
+  padding: 0.6rem 0.8rem;
+}
+
+.jnv-platform-summary-title {
+  margin: 0;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.jnv-platform-summary-subtitle {
+  margin: 3px 0 0 0;
+  font-size: 0.8rem;
+  color: #64748b;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.jnv-platform-board-divider {
+  height: 1px;
+  background: rgba(15, 23, 42, 0.06);
+  margin: 0.5rem 0;
+}
+
+.jnv-platform-board-item {
+  background: transparent;
+  border: none;
+  text-align: left;
+  color: #475569;
+  font-size: 0.88rem;
+  font-weight: 500;
+  padding: 0.65rem 0.8rem;
+  border-radius: 10px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.jnv-platform-board-item svg {
+  color: #94a3b8;
+  transition: color 0.2s;
+}
+
+.jnv-platform-board-item:hover {
+  background: rgba(79, 70, 229, 0.05);
+  color: #4f46e5;
+}
+
+.jnv-platform-board-item:hover svg {
+  color: #4f46e5;
+}
+
+/* Outbound Threat Actions Indicator */
+.jnv-platform-critical-logout:hover {
+  background: #fef2f2;
+  color: #ef4444;
+}
+.jnv-platform-critical-logout:hover svg {
+  color: #ef4444;
+}
+
+/* Indigo Solid Action CTA Button */
+.jnv-platform-cta-neon-btn {
+  background: #4f46e5;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 0.55rem 1.35rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
+  transition: all 0.2s ease;
+}
+
+.jnv-platform-cta-neon-btn:hover {
+  background: #4338ca;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(79, 70, 229, 0.35);
+}
+
+/* Smooth micro entry animations */
+@keyframes jnv-slide-up {
+  from { opacity: 0; transform: translateY(8px) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Mobile Breakpoints Viewports */
+@media (max-width: 900px) {
+  .jnv-platform-navbar {
+    padding: 0.75rem 2rem;
+  }
+  .jnv-platform-links-segment {
+    display: none; 
+  }
+}
