@@ -4,9 +4,10 @@ require('dotenv').config()
 const dbconnection = require('./config/db')
 const cors = require('cors')
 const path = require('path')
+const fs = require('fs')
 
-console.log("EMAIL_USER:", process.env.EMAIL_USER);
-console.log("EMAIL_PASS:", process.env.EMAIL_PASS);
+console.log("EMAIL_USER:", process.env.EMAIL_USER)
+console.log("EMAIL_PASS:", process.env.EMAIL_PASS)
 
 app.use(cors())
 app.use(express.json({ limit: '100mb' }))
@@ -14,17 +15,23 @@ app.use(express.urlencoded({ extended: true, limit: '100mb' }))
 
 dbconnection()
 
-// 1. All API Routes
+// 1. API Routes
 app.use('/api', require('./routes/AuthRoute'))
 
-// 2. Static Files (JS/CSS/Images)
+// 2. Serve Frontend Static Files
 const frontendPath = path.join(__dirname, '../frontend/dist')
+const indexPath = path.join(frontendPath, 'index.html')
+
 app.use(express.static(frontendPath))
 
-// 3. Simple Middleware Fallback (No wildcard strings = Zero PathError)
+// 3. Clean Fallback Check
 app.use((req, res, next) => {
   if (req.method === 'GET' && !req.path.startsWith('/api')) {
-    return res.sendFile(path.join(frontendPath, 'index.html'))
+    if (fs.existsSync(indexPath)) {
+      return res.sendFile(indexPath)
+    } else {
+      return res.status(404).send("Frontend build not found. Please verify npm run build executed for frontend.")
+    }
   }
   next()
 })
