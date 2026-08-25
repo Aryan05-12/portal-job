@@ -8,7 +8,7 @@ export default function SingleJob() {
   const [loading, setLoading] = useState(false); // Apply loading state ke liye
 
   useEffect(() => {
-    fetch(`http://localhost:1111/api/jobs/${id}`)
+    fetch(`https://jon-available.onrender.com/api/jobs/${id}`)
       .then((res) => res.json())
       .then((data) => setJob(data.job))
       .catch((err) => console.log(err));
@@ -28,7 +28,7 @@ export default function SingleJob() {
 
     try {
       // 2. Apne backend par Application data bhejo
-      const response = await fetch("http://localhost:1111/api/applications", {
+      const response = await fetch("https://jon-available.onrender.com/api/applications", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

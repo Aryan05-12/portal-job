@@ -17,7 +17,7 @@ const Contact = () => {
   useEffect(() => {
     const loadContent = async () => {
       try {
-        const response = await fetch("http://localhost:1111/api/site-content/contact");
+        const response = await fetch("https://jon-available.onrender.com/api/site-content/contact");
         const data = await response.json();
 
         if (response.ok && data.content) {

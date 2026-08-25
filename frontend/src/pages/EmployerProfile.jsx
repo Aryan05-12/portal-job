@@ -11,13 +11,13 @@ export default function EmployerProfile() {
   const [jobs, setJobs] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:1111/api/my-apply/${user.id}`)
+    fetch(`https://jon-available.onrender.com/api/my-apply/${user.id}`)
       .then((res) => res.json())
       .then((data) => setApplication(data));
   }, [user.id]);
 
   useEffect(() => {
-    fetch("http://localhost:1111/api/jobs")
+    fetch("https://jon-available.onrender.com/api/jobs")
       .then((res) => res.json())
       .then((data) => setJobs(data.jobs))
       .catch((err) => console.log(err));

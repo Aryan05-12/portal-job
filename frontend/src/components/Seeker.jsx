@@ -4,7 +4,7 @@ import { User, Mail, Phone, Lock, Camera, FileText, Upload, LogIn, Sparkles, Loa
 import Nav from './Nav';
 import "../styling/seeker.css";
 
-const API_URL = 'http://localhost:1111/api';
+const API_URL = 'https://jon-available.onrender.com/api';
 
 const Seeker = () => {
   const [formData, setFormData] = useState({

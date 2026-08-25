@@ -9,7 +9,7 @@ export default function ForgotPassword() {
 
     try {
       const res = await axios.post(
-        "http://localhost:1111/api/forgotPassword",
+        "https://jon-available.onrender.com/api/forgotPassword",
         { email }
       );
 

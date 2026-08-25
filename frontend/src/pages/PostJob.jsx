@@ -23,7 +23,7 @@ const PostJob = () => {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const res = await axios.get("http://localhost:1111/api/categories");
+        const res = await axios.get("https://jon-available.onrender.com/api/categories");
         const apiCategories = (res.data.categories || []).map((category) => category.name);
         setCategories([...new Set(["Development - IT", "Marketing", "Finance", ...apiCategories])]);
       } catch (error) {
@@ -50,7 +50,7 @@ const PostJob = () => {
       setLoading(true);
 
       const response = await axios.post(
-        "http://localhost:1111/api/jobs",
+        "https://jon-available.onrender.com/api/jobs",
         formData
       );
 

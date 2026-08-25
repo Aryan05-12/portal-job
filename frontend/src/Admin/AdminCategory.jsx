@@ -15,7 +15,7 @@ const AdminCategory = () => {
     }
 
     try {
-      const res = await axios.post("http://localhost:1111/api/createcategory", {
+      const res = await axios.post("https://jon-available.onrender.com/api/createcategory", {
         name: categoryName,
         description: description,
       });

@@ -110,7 +110,7 @@ const ManageAccount = () => {
       if (userId) {
         const { _id, id, ...profilePayload } = updatedUser;
         const res = await axios.put(
-          `http://localhost:1111/api/update-jobregister/${userId}`,
+          `https://jon-available.onrender.com/api/update-jobregister/${userId}`,
           profilePayload
         );
 

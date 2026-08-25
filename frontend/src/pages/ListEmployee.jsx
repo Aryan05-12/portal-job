@@ -11,7 +11,7 @@ const ListEmployee = () => {
   const fetchEmployees = async () => {
     try {
       setLoading(true);
-      const res = await axios.get("http://localhost:1111/api/users");
+      const res = await axios.get("https://jon-available.onrender.com/api/users");
       setEmployeesList(res.data.users || res.data);
     } catch (err) {
       console.log("Employees load karne mein error:", err);

@@ -19,7 +19,7 @@ import {
 import "../styling/js.css";
 
 
-const API_URL = 'http://localhost:1111/api';
+const API_URL = 'https://jon-available.onrender.com/api';
 
 const JobSeeker = () => {
   const [email, setEmail] = useState('');

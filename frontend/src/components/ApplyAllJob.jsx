@@ -6,7 +6,7 @@ export default function ApplyAllJob() {
   const [jobs, setJobs] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:1111/api/jobs")
+    fetch("https://jon-available.onrender.com/api/jobs")
       .then((res) => res.json())
       .then((data) => setJobs(data.jobs))
       .catch((err) => console.log(err));

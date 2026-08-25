@@ -38,7 +38,7 @@ const AdminDashboard = () => {
   useEffect(() => {
     const fetchDashboard = async () => {
       try {
-        const res = await axios.get('http://localhost:1111/api/dashboard');
+        const res = await axios.get('https://jon-available.onrender.com/api/dashboard');
         setDashboard({
           counts: res.data.counts || { employers: 0, jobs: 0, categories: 0 },
           users: res.data.users || [],

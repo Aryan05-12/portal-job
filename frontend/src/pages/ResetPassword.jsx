@@ -10,7 +10,7 @@ export default function ResetPassword() {
     e.preventDefault();
 
     await axios.post(
-      `http://localhost:1111/api/reset-password/${token}`,
+      `https://jon-available.onrender.com/api/reset-password/${token}`,
       { password }
     );
 

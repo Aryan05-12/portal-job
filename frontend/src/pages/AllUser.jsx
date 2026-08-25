@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Users, RefreshCw, Edit3, Trash2, X, ShieldAlert, CheckCircle, Mail, Phone, Shield } from "lucide-react";
 import "../admincss/alluser.css"; // Pure CSS styles linked here
 
-const API_URL = "http://localhost:1111/api";
+const API_URL = "https://jon-available.onrender.com/api";
 
 const emptyForm = {
   name: "",

@@ -22,7 +22,7 @@ export default function ViewList() {
    // 3. API call single user ka data laane ke liye
     const fetchEmployerDetails = async () => {
         try {
-            const res = await axios.get(`http://localhost:1111/api/users/${id}`);
+            const res = await axios.get(`https://jon-available.onrender.com/api/users/${id}`);
             
             // Backend se jo 'user' object aa raha hai, use check karo
             if (res.data && res.data.user) {

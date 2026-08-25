@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "../admincss/adminnav.css";
 
-const API_URL = "http://localhost:1111/api";
+const API_URL = "https://jon-available.onrender.com/api";
 
 const defaults = {
   about: {

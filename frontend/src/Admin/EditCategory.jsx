@@ -31,7 +31,7 @@ export default function EditCategory() {
     try {
       setFetchLoading(true);
       const res = await axios.get(
-        "http://localhost:1111/api/categories"
+        "https://jon-available.onrender.com/api/categories"
       );
 
       const category = res.data.categories.find(
@@ -68,7 +68,7 @@ export default function EditCategory() {
 
     try {
       await axios.put(
-        `http://localhost:1111/api/categories/${id}`,
+        `https://jon-available.onrender.com/api/categories/${id}`,
         formData
       );
 

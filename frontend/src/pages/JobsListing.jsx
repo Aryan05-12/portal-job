@@ -12,7 +12,7 @@ const JobsListing = () => {
   useEffect(() => {
     const fetchJobs = async () => {
       try {
-        const res = await axios.get('http://localhost:1111/api/jobs');
+        const res = await axios.get('https://jon-available.onrender.com/api/jobs');
         setJobs(res.data.jobs || []);
       } catch (error) {
         setMessage(error.response?.data?.message || 'Jobs load nahi ho paaye');

@@ -4,7 +4,7 @@ import { User, Mail, Phone, Lock, FileText, Globe, Image, UploadCloud, LogIn, Sp
 import JobNav from './JobNav';
 import '../styling/seeker.css';
 
-const API_URL = 'http://localhost:1111/api';
+const API_URL = 'https://jon-available.onrender.com/api';
 
 const EmployerReg = () => {
   const [formData, setFormData] = useState({

@@ -11,7 +11,7 @@ const AdminmanageC = () => {
   const fetchCategories = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:1111/api/categories"
+        "https://jon-available.onrender.com/api/categories"
       );
 
       setCategoriesList(res.data.categories || res.data);
@@ -33,7 +33,7 @@ const AdminmanageC = () => {
 
     try {
       await axios.delete(
-        `http://localhost:1111/api/categories/${id}`
+        `https://jon-available.onrender.com/api/categories/${id}`
       );
 
       fetchCategories();

@@ -23,7 +23,7 @@ export default function JobDetails() {
     useEffect(() => {
         const fetchjob = async () => {
             try {
-                const res = await axios.get(`http://localhost:1111/api/jobs/${id}`);
+                const res = await axios.get(`https://jon-available.onrender.com/api/jobs/${id}`);
                 setFormData(res.data.job || res.data);
             } catch (error) {
                 console.log("Data error", error);

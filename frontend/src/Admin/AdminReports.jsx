@@ -14,7 +14,7 @@ const AdminReports = () => {
     setMessage('');
 
     try {
-      const res = await axios.get('http://localhost:1111/api/jobs');
+      const res = await axios.get('https://jon-available.onrender.com/api/jobs');
       const allJobs = res.data.jobs || [];
       const from = fromDate ? new Date(fromDate) : null;
       const to = toDate ? new Date(toDate) : null;

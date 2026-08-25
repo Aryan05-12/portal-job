@@ -16,7 +16,7 @@ export default function AdminApplication() {
   // 1. Fetch Incoming Applications Array
   const fetchApplications = () => {
     setLoading(true);
-    fetch("http://localhost:1111/api/applications")
+    fetch("https://jon-available.onrender.com/api/applications")
       .then((res) => res.json())
       .then((data) => {
         setApplications(data.applications || []);
@@ -36,7 +36,7 @@ export default function AdminApplication() {
   // 2. Premium Status Mutation Operations
   const handleStatusChange = async (appId, newStatus) => {
     try {
-      const response = await fetch(`http://localhost:1111/api/applications/${appId}`, {
+      const response = await fetch(`https://jon-available.onrender.com/api/applications/${appId}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

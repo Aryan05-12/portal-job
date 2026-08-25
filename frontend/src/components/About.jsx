@@ -14,7 +14,7 @@ export default function About() {
   useEffect(() => {
     const loadContent = async () => {
       try {
-        const response = await fetch("http://localhost:1111/api/site-content/about");
+        const response = await fetch("https://jon-available.onrender.com/api/site-content/about");
         const data = await response.json();
 
         if (response.ok && data.content) {

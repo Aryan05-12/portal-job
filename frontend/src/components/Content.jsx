@@ -24,7 +24,7 @@ export default function Content() {
   const [locationQuery, setLocationQuery] = useState('');
 
   useEffect(() => {
-    fetch("http://localhost:1111/api/jobs")
+    fetch("https://jon-available.onrender.com/api/jobs")
       .then((res) => res.json())
       .then((data) => {
         // Backend console check ke liye
