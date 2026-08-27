@@ -16,6 +16,7 @@ const Seeker = () => {
     resume: '',
     resumeName: '',
   });
+
   const [status, setStatus] = useState({ type: '', message: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
