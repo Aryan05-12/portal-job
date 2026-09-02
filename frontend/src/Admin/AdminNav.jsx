@@ -30,7 +30,7 @@ const AdminNav = () => {
   const handleLogout = () => {
     // Apni logout logic yahan handle karein
     localStorage.removeItem('adminToken');
-    navigate('/admin-login');
+    navigate('/admin');
   };
 
   return (

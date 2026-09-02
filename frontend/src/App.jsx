@@ -62,6 +62,9 @@ function App() {
               <Route path="/applications-details" element={<JobDetails />} />
             <Route path="/applications-details/:id" element={<JobDetails/>}/>
             <Route path="/forget-pass"  element={<ForgotPassword/>}/>
+            <Route path="/account" element={<JobSeeker/>}/>
+            <Route path="/change-password" element={<ForgotPassword/>}/>
+            <Route path="/Candiate-list" element={<AdminApplication/>}/>
 
 
             <Route path="/view-employee" element={<ViewList/>}/>

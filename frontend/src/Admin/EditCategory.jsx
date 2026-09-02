@@ -73,7 +73,7 @@ export default function EditCategory() {
       );
 
       alert("Category Updated Successfully");
-      navigate("/admin/manage-category");
+      navigate("/manage-category");
     } catch (error) {
       console.log(error);
       setError(error.response?.data?.message || "Failed to update category");

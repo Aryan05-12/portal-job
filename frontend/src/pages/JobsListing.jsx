@@ -12,8 +12,18 @@ const JobsListing = () => {
   useEffect(() => {
     const fetchJobs = async () => {
       try {
-        const res = await axios.get('https://jon-available.onrender.com/api/jobs');
-        setJobs(res.data.jobs || []);
+        const savedUser = JSON.parse(localStorage.getItem('user') || '{}');
+        const employerId = savedUser._id || savedUser.id;
+
+        if (!employerId) {
+          setMessage('Please login first to manage your jobs');
+          setJobs([]);
+          return;
+        }
+
+        const res = await axios.get(`https://jon-available.onrender.com/api/jobs?employerId=${employerId}`);
+        const myJobs = (res.data.jobs || []).filter((job) => job.employerId === employerId);
+        setJobs(myJobs);
       } catch (error) {
         setMessage(error.response?.data?.message || 'Jobs load nahi ho paaye');
       } finally {
@@ -47,7 +57,7 @@ const JobsListing = () => {
       <JobNav />
 
       <header className="jobs-listing-header">
-        <h1>Employer | Jobs Listing</h1>
+        <h1>Employer | Manage My Jobs</h1>
       </header>
 
       <main className="jobs-listing-container">
@@ -71,7 +81,7 @@ const JobsListing = () => {
         </section>
 
         <div className="latest-jobs-heading-bar">
-          <h2>Latest Jobs</h2>
+          <h2>My Posted Jobs</h2>
         </div>
 
         <section className="jobs-cards-grid-wrapper">
@@ -89,7 +99,7 @@ const JobsListing = () => {
 
           {!loading && !message && filteredJobs.length === 0 && (
             <div className="dummy-job-card-placeholder">
-              <p>Abhi koi job nahi mili.</p>
+              <p>Abhi aapne koi job post nahi ki.</p>
               <span className="api-hint-badge">Post Job first</span>
             </div>
           )}

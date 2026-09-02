@@ -45,11 +45,15 @@ const Seeker = () => {
   const handleResumeChange = (e) => {
     const file = e.target.files[0];
     if (file) {
-      setFormData((prevData) => ({
-        ...prevData,
-        resume: file,
-        resumeName: file.name,
-      }));
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setFormData((prevData) => ({
+          ...prevData,
+          resume: reader.result,
+          resumeName: file.name,
+        }));
+      };
+      reader.readAsDataURL(file);
     }
   };
 
@@ -72,6 +76,7 @@ const Seeker = () => {
           contactNumber: formData.contactNumber,
           password: formData.password,
           photo: formData.photo,
+          resume: formData.resume,
           resumeName: formData.resumeName,
         }),
       });
@@ -89,6 +94,7 @@ const Seeker = () => {
         contact: data.user?.contact || formData.contactNumber,
         contactNumber: data.user?.contactNumber || formData.contactNumber,
         photo: data.user?.photo || formData.photo,
+        resume: data.user?.resume || formData.resume,
         resumeName: data.user?.resumeName || formData.resumeName,
       };
 

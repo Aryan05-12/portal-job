@@ -22,6 +22,14 @@ const ApplicationSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  resume: {
+    type: String,
+    default: "",
+  },
+  resumeName: {
+    type: String,
+    default: "",
+  },
   status: {
     type: String,
     enum: ["Pending", "Accepted", "Rejected"], // Sirf yahi 3 status ho sakte hain

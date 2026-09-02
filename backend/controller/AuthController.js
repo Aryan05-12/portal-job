@@ -104,7 +104,7 @@ exports.register = async (req, res) => {
 
     try {
 
-        const { email, phone, contact, contactNumber, fullName, name, password, tagline, website, logoName, logo } = req.body;
+        const { email, phone, contact, contactNumber, fullName, name, password, tagline, website, logoName, logo, photo, resume, resumeName } = req.body;
         const normalizedEmail = email?.trim().toLowerCase();
         const userName = name || fullName;
         const userContact = contact || contactNumber || phone;
@@ -135,7 +135,10 @@ exports.register = async (req, res) => {
             tagline,
             website,
             logoName,
-            logo
+            logo,
+            photo,
+            resume,
+            resumeName
         })
 
         const token = createToken(user._id)
@@ -151,7 +154,10 @@ exports.register = async (req, res) => {
                 tagline: user.tagline,
                 website: user.website,
                 logoName: user.logoName,
-                logo: user.logo
+                logo: user.logo,
+                photo: user.photo,
+                resume: user.resume,
+                resumeName: user.resumeName
             }
         })
 
@@ -326,6 +332,10 @@ exports.postJob = async (req, res) => {
       location,
       date,
       description,
+      employerId,
+      employerName,
+      employerEmail,
+      companyName,
     } = req.body;
 
     // Validation
@@ -347,6 +357,10 @@ exports.postJob = async (req, res) => {
       location,
       date,
       description,
+      employerId,
+      employerName,
+      employerEmail,
+      companyName,
     });
 
     res.status(201).json({
@@ -368,7 +382,8 @@ exports.postJob = async (req, res) => {
 // ==============================
 exports.getAllJobs = async (req, res) => {
   try {
-    const jobs = await Job.find().sort({ createdAt: -1 });
+    const filter = req.query.employerId ? { employerId: req.query.employerId } : {};
+    const jobs = await Job.find(filter).sort({ createdAt: -1 });
 
     res.status(200).json({
       success: true,
@@ -389,7 +404,8 @@ exports.getAllJobs = async (req, res) => {
 
 exports.getAllJobs = async (req, res) => {
   try {
-    const jobs = await Job.find().sort({ createdAt: -1 });
+    const filter = req.query.employerId ? { employerId: req.query.employerId } : {};
+    const jobs = await Job.find(filter).sort({ createdAt: -1 });
 
     res.status(200).json({
       success: true,
@@ -637,10 +653,11 @@ exports.deleteUser = async (req, res) => {
 
 exports.dashboardData = async (req, res) => {
   try {
-    const [users, jobs, categories] = await Promise.all([
+    const [users, jobs, categories, applications] = await Promise.all([
       User.find().sort({ createdAt: -1 }).select("-password"),
       Job.find().sort({ createdAt: -1 }),
       Category.find().sort({ createdAt: -1 }),
+      Application.find().sort({ date: -1 }),
     ]);
 
     res.status(200).json({
@@ -649,10 +666,15 @@ exports.dashboardData = async (req, res) => {
         employers: users.length,
         jobs: jobs.length,
         categories: categories.length,
+        applications: applications.length,
+        accepted: applications.filter((app) => app.status === "Accepted").length,
+        rejected: applications.filter((app) => app.status === "Rejected").length,
+        pending: applications.filter((app) => !app.status || app.status === "Pending").length,
       },
       users,
       jobs,
       categories,
+      applications,
     });
   } catch (error) {
     res.status(500).json({
@@ -867,7 +889,7 @@ exports.updateSiteContent = async (req, res) => {
 
 exports.applyJob = async (req, res) => {
   try {
-    const { jobId, jobTitle, userId, userName, userEmail } = req.body;
+    const { jobId, jobTitle, userId, userName, userEmail, resume, resumeName } = req.body;
 
     // Check karo duplicate application toh nahi hai
     const alreadyApplied = await Application.findOne({ jobId, userId });
@@ -877,12 +899,16 @@ exports.applyJob = async (req, res) => {
       });
     }
 
+    const user = await User.findById(userId).select("-password");
+
     const newApplication = new Application({
       jobId,
       jobTitle,
       userId,
-      userName,
-      userEmail,
+      userName: userName || user?.fullName || user?.name || "Candidate",
+      userEmail: userEmail || user?.email || "",
+      resume: resume || user?.resume || "",
+      resumeName: resumeName || user?.resumeName || "",
     });
 
     await newApplication.save();

@@ -27,6 +27,18 @@ const postJobScehema = new mongoose.Schema({
     },
     description:{
         type:String 
+    },
+    employerId:{
+        type:String
+    },
+    employerName:{
+        type:String
+    },
+    employerEmail:{
+        type:String
+    },
+    companyName:{
+        type:String
     }
 }, { timestamps: true })
 

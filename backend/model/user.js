@@ -30,6 +30,14 @@ const userSchema = new mongoose.Schema({
     type: String, // Yahan file ka path ya URL store hoga
     default: null
   },
+  resumeName: {
+    type: String,
+    default: ""
+  },
+  photo: {
+    type: String,
+    default: ""
+  },
   createdAt: {
     type: Date,
     default: Date.now
